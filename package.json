@@ -10,5 +10,8 @@
   "scripts": {
     "scan": "node src/cli.js scan",
     "fix": "node src/cli.js fixpack"
+  },
+  "dependencies": {
+    "nodemailer": "^10.2.1"
   }
 }

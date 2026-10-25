@@ -33,6 +33,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
 
       - name: Render site from the latest scan
         env:
@@ -57,6 +61,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
 
       - name: Scan storefronts
         env:
@@ -71,6 +79,8 @@ jobs:
           CARTSIGNAL_BASE_URL: ${{ vars.CARTSIGNAL_BASE_URL }}
           CARTSIGNAL_OWNER_EMAIL: ${{ secrets.CARTSIGNAL_OWNER_EMAIL }}
           CARTSIGNAL_FROM: ${{ vars.CARTSIGNAL_FROM }}
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
         run: node src/cli.js digest --send
 
@@ -112,6 +122,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
 
       - name: Build and email fix pack
         env:
@@ -122,6 +136,8 @@ jobs:
           CARTSIGNAL_OWNER_EMAIL: ${{ secrets.CARTSIGNAL_OWNER_EMAIL }}
           CARTSIGNAL_FROM: ${{ vars.CARTSIGNAL_FROM }}
           CARTSIGNAL_BRAND: ${{ vars.CARTSIGNAL_BRAND }}
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
         run: node src/cli.js fulfill --domain "$PACK_DOMAIN" --email "$PACK_EMAIL" --order "$PACK_ORDER"
 

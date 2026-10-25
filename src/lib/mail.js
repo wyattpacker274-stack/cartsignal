@@ -1,12 +1,49 @@
+import nodemailer from 'nodemailer';
 import { config } from '../config.js';
 
 const ENDPOINT = 'https://api.resend.com/emails';
 
+async function sendGmail({ recipients, subject, html, text, attachments, replyTo, from }) {
+  const user = process.env.GMAIL_USER;
+  const password = process.env.GMAIL_APP_PASSWORD;
+  if (!user || !password) return { sent: false, reason: 'GMAIL_USER and GMAIL_APP_PASSWORD must both be set' };
+
+  const transport = nodemailer.createTransport({
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true,
+    auth: { user, pass: password.replace(/\s/g, '') },
+  });
+  const message = {
+    from: from || `${config.brand} <${user}>`,
+    to: recipients,
+    subject,
+    html,
+    text,
+    attachments: (attachments || []).map((attachment) => ({
+      filename: attachment.filename,
+      content: Buffer.isBuffer(attachment.content) ? attachment.content : Buffer.from(String(attachment.content)),
+    })),
+  };
+  if (replyTo) message.replyTo = replyTo;
+
+  try {
+    const result = await transport.sendMail(message);
+    return { sent: true, id: result.messageId };
+  } catch (error) {
+    return { sent: false, reason: error instanceof Error ? error.message : String(error) };
+  }
+}
+
 export async function sendMail({ to, subject, html, text, attachments, replyTo, from }) {
-  const key = process.env.RESEND_API_KEY;
   const recipients = (Array.isArray(to) ? to : [to]).filter(Boolean);
   if (!recipients.length) return { sent: false, reason: 'no recipient' };
-  if (!key) return { sent: false, reason: 'RESEND_API_KEY not set' };
+  if (process.env.GMAIL_USER || process.env.GMAIL_APP_PASSWORD) {
+    return sendGmail({ recipients, subject, html, text, attachments, replyTo, from });
+  }
+
+  const key = process.env.RESEND_API_KEY;
+  if (!key) return { sent: false, reason: 'Gmail SMTP or RESEND_API_KEY must be configured' };
 
   const body = {
     from: from || config.fromEmail,
