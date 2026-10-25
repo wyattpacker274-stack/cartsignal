@@ -1,11 +1,12 @@
 import { readFile, writeFile, mkdir, readdir } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 import http from 'node:http';
 import path from 'node:path';
 import { scanDomain } from './checks.js';
 import { renderLeaderboard, renderSite } from './report.js';
 import { buildLlmsTxt, buildRobotsAdditions, buildSchemaBlock, buildFixPlan, renderFixpackHtml } from './fixpack.js';
-import { slug } from './html.js';
+import { escapeHtml, slug } from './html.js';
 import { config } from './config.js';
 import { saveSnapshot, loadPrevious, loadSnapshots, diffRecords } from './state.js';
 import { sendMail } from './lib/mail.js';
@@ -191,6 +192,40 @@ async function buildDelivery(record) {
   return { zip, filename, reportHtml, plan };
 }
 
+function orderHash(order) {
+  return createHash('sha256').update(String(order)).digest('hex');
+}
+
+async function readFulfillments() {
+  const file = path.join(OUT, 'fulfillments.json');
+  if (!existsSync(file)) return [];
+  const data = await readJson(file);
+  return Array.isArray(data.orders) ? data.orders : [];
+}
+
+async function recordFulfillment(order) {
+  const orders = await readFulfillments();
+  const hash = orderHash(order);
+  if (orders.some((entry) => entry.hash === hash)) return;
+  orders.push({ hash, sentAt: new Date().toISOString() });
+  await writeFile(path.join(OUT, 'fulfillments.json'), JSON.stringify({ orders }, null, 2) + '\n');
+}
+
+async function alertFulfillmentFailure(domain, email, error) {
+  if (!config.ownerEmail) {
+    console.error('owner alert not sent: CARTSIGNAL_OWNER_EMAIL is unset');
+    return;
+  }
+  const message = error instanceof Error ? error.message : String(error);
+  const result = await sendMail({
+    to: config.ownerEmail,
+    subject: `CartSignal fulfillment failed: ${domain}`,
+    text: `A paid fix pack could not be delivered.\n\nDomain: ${domain}\nBuyer: ${email}\nError: ${message}\n\nCheck the GitHub Actions run, then retry fulfillment.`,
+    html: `<p>A paid fix pack could not be delivered.</p><dl><dt>Domain</dt><dd>${escapeHtml(domain)}</dd><dt>Buyer</dt><dd>${escapeHtml(email)}</dd><dt>Error</dt><dd>${escapeHtml(message)}</dd></dl><p>Check the GitHub Actions run, then retry fulfillment.</p>`,
+  });
+  console.error(result.sent ? `owner alert sent (${result.id})` : `owner alert failed: ${result.reason}`);
+}
+
 async function cmdFulfill(args) {
   const domain = String(args.domain || '').trim().toLowerCase().replace(/^www\./, '');
   const email = String(args.email || '').trim();
@@ -203,38 +238,45 @@ async function cmdFulfill(args) {
     process.exit(2);
   }
 
-  let record = null;
-  const dataPath = path.join(OUT, 'data.json');
-  if (existsSync(dataPath)) {
-    const data = await readJson(dataPath);
-    record = (data.records || []).find((r) => r.domain === domain) || null;
-  }
-  if (!record) record = await scanDomain(domain);
+  const order = String(args.order || '').trim();
+  try {
+    if (order && (await readFulfillments()).some((entry) => entry.hash === orderHash(order))) {
+      console.log('order already fulfilled; duplicate delivery skipped');
+      return;
+    }
 
-  const delivery = await buildDelivery(record);
-  const subject = `${record.domain} — agent readiness fix pack (${record.score == null ? 'n/a' : record.score + '/100'})`;
-  const text = [
-    `Thanks — here is the agent readiness pack for ${record.domain}.`,
-    '',
-    `Score at build time: ${record.score == null ? 'not scored' : `${record.score}/100 (${record.grade})`}.`,
-    '',
-    'In the zip:',
-    '  llms.txt                — publish at the site root',
-    '  robots-additions.txt    — merge above existing robots rules',
-    '  schema.html             — Organization + Product JSON-LD blocks',
-    '  fix-plan.json           — ordered actions with the points each is worth',
-    '  report.html             — the same plan, readable in a browser',
-    '',
-    'Apply in the order listed. Re-scan is free any time.',
-    '',
-    config.brand,
-    config.baseUrl,
-  ].join('\n');
+    let record = null;
+    const dataPath = path.join(OUT, 'data.json');
+    if (existsSync(dataPath)) {
+      const data = await readJson(dataPath);
+      record = (data.records || []).find((r) => r.domain === domain) || null;
+    }
+    if (!record) record = await scanDomain(domain);
 
-  const html = `<div style="font:15px/1.65 -apple-system,Segoe UI,sans-serif;color:#10161c;max-width:600px">
-<p>Thanks — here is the agent readiness pack for <strong>${record.domain}</strong>.</p>
-<p>Score at build time: <strong>${record.score == null ? 'not scored' : `${record.score}/100 (${record.grade})`}</strong>.</p>
-<p>Attached: <code>${delivery.filename}</code></p>
+    const delivery = await buildDelivery(record);
+    const subject = `${record.domain} — agent readiness fix pack (${record.score == null ? 'n/a' : record.score + '/100'})`;
+    const text = [
+      `Thanks — here is the agent readiness pack for ${record.domain}.`,
+      '',
+      `Score at build time: ${record.score == null ? 'not scored' : `${record.score}/100 (${record.grade})`}.`,
+      '',
+      'In the zip:',
+      '  llms.txt                — publish at the site root',
+      '  robots-additions.txt    — merge above existing robots rules',
+      '  schema.html             — Organization + Product JSON-LD blocks',
+      '  fix-plan.json           — ordered actions with the points each is worth',
+      '  report.html             — the same plan, readable in a browser',
+      '',
+      'Apply in the order listed. Re-scan is free any time.',
+      '',
+      config.brand,
+      config.baseUrl,
+    ].join('\n');
+
+    const html = `<div style="font:15px/1.65 -apple-system,Segoe UI,sans-serif;color:#10161c;max-width:600px">
+<p>Thanks — here is the agent readiness pack for <strong>${escapeHtml(record.domain)}</strong>.</p>
+<p>Score at build time: <strong>${record.score == null ? 'not scored' : `${record.score}/100 (${escapeHtml(record.grade)})`}</strong>.</p>
+<p>Attached: <code>${escapeHtml(delivery.filename)}</code></p>
 <ul style="padding-left:18px">
 <li><strong>llms.txt</strong> — publish at the site root</li>
 <li><strong>robots-additions.txt</strong> — merge above existing robots rules</li>
@@ -243,19 +285,25 @@ async function cmdFulfill(args) {
 <li><strong>report.html</strong> — the same plan, readable in a browser</li>
 </ul>
 <p>Apply in the order listed. Re-scan is free any time.</p>
-<p style="color:#6b7785">${config.brand} · ${config.baseUrl}</p>
+<p style="color:#6b7785">${escapeHtml(config.brand)} · ${escapeHtml(config.baseUrl)}</p>
 </div>`;
 
-  const result = await sendMail({
-    to: email,
-    subject,
-    html,
-    text,
-    attachments: [{ filename: delivery.filename, content: delivery.zip }],
-  });
+    const result = await sendMail({
+      to: email,
+      subject,
+      html,
+      text,
+      attachments: [{ filename: delivery.filename, content: delivery.zip }],
+    });
+    if (!result.sent) throw new Error(`${result.reason}; zip ready at out/deliveries/${delivery.filename}`);
 
-  if (result.sent) console.log(`delivered ${delivery.filename} to ${email} (${result.id})`);
-  else console.log(`mail not sent (${result.reason}) — zip ready at out/deliveries/${delivery.filename}`);
+    console.log(`delivered ${delivery.filename} to ${email} (${result.id})`);
+    if (order) await recordFulfillment(order);
+  } catch (error) {
+    console.error(`fulfillment failed for ${domain}: ${error instanceof Error ? error.message : error}`);
+    await alertFulfillmentFailure(domain, email, error);
+    process.exitCode = 1;
+  }
 }
 
 async function cmdFixpack(args) {

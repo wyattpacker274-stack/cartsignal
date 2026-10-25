@@ -123,7 +123,7 @@ export default {
         'content-type': 'application/json',
         'user-agent': 'cartsignal-worker',
       },
-      body: JSON.stringify({ event_type: 'fulfill', client_payload: { domain, email } }),
+      body: JSON.stringify({ event_type: 'fulfill', client_payload: { domain, email, order: session.id } }),
     });
 
     if (!dispatch.ok) {

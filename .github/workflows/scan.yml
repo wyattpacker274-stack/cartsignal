@@ -1,6 +1,13 @@
 name: cartsignal
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/**'
+      - 'config.json'
+      - 'out/data.json'
+      - '.github/workflows/scan.yml'
   schedule:
     - cron: '0 14 * * 1'
   workflow_dispatch:
@@ -17,8 +24,30 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  publish:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Render site from the latest scan
+        env:
+          CARTSIGNAL_BASE_URL: ${{ vars.CARTSIGNAL_BASE_URL }}
+          CARTSIGNAL_OWNER_EMAIL: ${{ secrets.CARTSIGNAL_OWNER_EMAIL }}
+          CARTSIGNAL_FROM: ${{ vars.CARTSIGNAL_FROM }}
+          CARTSIGNAL_BRAND: ${{ vars.CARTSIGNAL_BRAND }}
+        run: node src/cli.js publish
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: out
+
   scan:
-    if: github.event_name != 'repository_dispatch'
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     outputs:
       changed: ${{ steps.commit.outputs.changed }}
@@ -64,7 +93,8 @@ jobs:
           path: out
 
   deploy:
-    needs: scan
+    needs: [publish, scan]
+    if: always() && (needs.publish.result == 'success' || needs.scan.result == 'success')
     runs-on: ubuntu-latest
     environment:
       name: github-pages
@@ -87,8 +117,20 @@ jobs:
         env:
           PACK_DOMAIN: ${{ github.event.client_payload.domain }}
           PACK_EMAIL: ${{ github.event.client_payload.email }}
+          PACK_ORDER: ${{ github.event.client_payload.order }}
           CARTSIGNAL_BASE_URL: ${{ vars.CARTSIGNAL_BASE_URL }}
+          CARTSIGNAL_OWNER_EMAIL: ${{ secrets.CARTSIGNAL_OWNER_EMAIL }}
           CARTSIGNAL_FROM: ${{ vars.CARTSIGNAL_FROM }}
           CARTSIGNAL_BRAND: ${{ vars.CARTSIGNAL_BRAND }}
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
-        run: node src/cli.js fulfill --domain "$PACK_DOMAIN" --email "$PACK_EMAIL"
+        run: node src/cli.js fulfill --domain "$PACK_DOMAIN" --email "$PACK_EMAIL" --order "$PACK_ORDER"
+
+      - name: Record fulfilled order
+        run: |
+          git config user.name "cartsignal-bot"
+          git config user.email "cartsignal-bot@users.noreply.github.com"
+          git add out/fulfillments.json
+          if ! git diff --staged --quiet; then
+            git commit -m "record fulfilled order"
+            git push
+          fi
