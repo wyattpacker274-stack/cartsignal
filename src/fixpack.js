@@ -1,5 +1,12 @@
 import { gaps } from './checks.js';
 import { escapeHtml } from './html.js';
+import { config } from './config.js';
+
+function purchaseTarget() {
+  if (config.checkoutUrl) return config.checkoutUrl;
+  if (config.ownerEmail) return `mailto:${config.ownerEmail}?subject=${encodeURIComponent('Agent readiness fix pack')}`;
+  return '#plan';
+}
 
 function brandName(record) {
   if (record.meta && record.meta.orgName) return record.meta.orgName;
@@ -219,13 +226,20 @@ th{color:var(--muted);font-weight:500;font-size:12px;letter-spacing:.06em;text-t
 .num{font-family:var(--mono);color:var(--accent)}
 pre{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px;overflow-x:auto;font:13px/1.6 var(--mono);color:#c9d3df}
 .badge{display:inline-block;font-family:var(--mono);font-size:12px;padding:3px 9px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
+.cta{display:inline-block;background:var(--accent);color:#06120c;font-weight:600;padding:11px 20px;border-radius:8px;text-decoration:none}
+.fine{color:var(--muted);font-size:13px;margin:10px 0 0}
+.buy{margin-top:44px;padding:22px;border:1px solid var(--line);border-radius:12px;background:var(--panel);display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.buy p{margin:0;color:var(--muted)}
 </style></head><body><div class="wrap">
 <h1>${escapeHtml(brandName(record))}</h1>
 <p class="sub">Agent-commerce fix pack for ${escapeHtml(record.domain)} &middot; score ${record.score}/100 &middot; grade ${record.grade} &middot; <span class="badge">+${steps.reduce((s, x) => s + x.delta, 0)} points available</span></p>
+<p><a class="cta" href="${escapeHtml(purchaseTarget())}">Get the full pack &mdash; $${config.pricing.fixPack}</a></p>
+<p class="fine">ZIP with the report, llms.txt, robots additions, and JSON-LD blocks. Emailed within minutes of payment.</p>
 <h2>Do this, in order</h2>
 <table><thead><tr><th>Check</th><th>Gain</th><th>Action</th></tr></thead><tbody>${rows}</tbody></table>
 <h2>llms.txt &rarr; site root</h2><pre>${escapeHtml(pack.llmsTxt)}</pre>
 <h2>robots.txt additions</h2><pre>${escapeHtml(pack.robots)}</pre>
 <h2>JSON-LD blocks</h2><pre>${escapeHtml(pack.schema)}</pre>
+<div class="buy"><p>Ship every step above in one afternoon.</p><a class="cta" href="${escapeHtml(purchaseTarget())}">Get the fix pack &mdash; $${config.pricing.fixPack}</a></div>
 </div></body></html>`;
 }
