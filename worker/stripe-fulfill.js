@@ -1,6 +1,7 @@
 // Cloudflare Worker: Stripe checkout -> GitHub repository_dispatch -> emailed fix pack.
-// Secrets: STRIPE_WEBHOOK_SECRET (+ optional STRIPE_WEBHOOK_SECRET_2; either may hold
-// a comma-separated list), GITHUB_TOKEN (fine-grained PAT, contents:write), GITHUB_REPO ("owner/name").
+// Secrets: STRIPE_WEBHOOK_SECRET and any other key starting STRIPE_WEBHOOK_SECRET
+// (each may hold a comma-separated list), GITHUB_TOKEN (fine-grained PAT,
+// contents:write), GITHUB_REPO ("owner/name").
 
 const TOLERANCE_SECONDS = 300;
 
@@ -22,7 +23,9 @@ function safeEqual(a, b) {
 }
 
 function webhookSecrets(env) {
-  return [env.STRIPE_WEBHOOK_SECRET, env.STRIPE_WEBHOOK_SECRET_2]
+  return Object.keys(env)
+    .filter((key) => key.startsWith('STRIPE_WEBHOOK_SECRET'))
+    .map((key) => env[key])
     .filter(Boolean)
     .join(',')
     .split(',')
@@ -109,7 +112,8 @@ export default {
     const email = (session.customer_details && session.customer_details.email) || session.customer_email;
     const domain = normalizeDomain(pickDomain(session));
     console.log('session', session.id, 'domain', domain, 'email', email);
-    if (!domain || !email) return new Response('missing domain or email', { status: 422 });
+    // 200 so Stripe stops retrying an order no retry can complete; the log is the alert.
+    if (!domain || !email) return new Response('missing domain or email', { status: 200 });
 
     const dispatch = await fetch(`https://api.github.com/repos/${env.GITHUB_REPO}/dispatches`, {
       method: 'POST',
