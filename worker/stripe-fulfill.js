@@ -1,5 +1,6 @@
 // Cloudflare Worker: Stripe checkout -> GitHub repository_dispatch -> emailed fix pack.
-// Secrets: STRIPE_WEBHOOK_SECRET, GITHUB_TOKEN (fine-grained PAT, actions:write), GITHUB_REPO ("owner/name").
+// Secrets: STRIPE_WEBHOOK_SECRET (+ optional STRIPE_WEBHOOK_SECRET_2; either may hold
+// a comma-separated list), GITHUB_TOKEN (fine-grained PAT, contents:write), GITHUB_REPO ("owner/name").
 
 const TOLERANCE_SECONDS = 300;
 
@@ -20,7 +21,16 @@ function safeEqual(a, b) {
   return diff === 0;
 }
 
-async function verifyStripe(payload, header, secret) {
+function webhookSecrets(env) {
+  return [env.STRIPE_WEBHOOK_SECRET, env.STRIPE_WEBHOOK_SECRET_2]
+    .filter(Boolean)
+    .join(',')
+    .split(',')
+    .map((value) => value.trim())
+    .filter(Boolean);
+}
+
+async function verifyStripe(payload, header, secrets) {
   const parts = {};
   for (const piece of String(header).split(',')) {
     const index = piece.indexOf('=');
@@ -29,7 +39,21 @@ async function verifyStripe(payload, header, secret) {
   if (!parts.t || !parts.v1) return false;
   const age = Math.abs(Math.floor(Date.now() / 1000) - Number(parts.t));
   if (!Number.isFinite(age) || age > TOLERANCE_SECONDS) return false;
-  return safeEqual(await hmacHex(secret, `${parts.t}.${payload}`), parts.v1);
+  const message = `${parts.t}.${payload}`;
+  for (const secret of secrets) {
+    if (safeEqual(await hmacHex(secret, message), parts.v1)) return true;
+  }
+  return false;
+}
+
+function describeUnverified(payload) {
+  try {
+    const event = JSON.parse(payload);
+    const session = (event.data && event.data.object) || {};
+    return `event=${event.id || '?'} type=${event.type || '?'} livemode=${event.livemode} session=${session.id || '-'}`;
+  } catch {
+    return 'unparseable payload';
+  }
 }
 
 function pickDomain(session) {
@@ -57,7 +81,10 @@ export default {
 
     const payload = await request.text();
     const signature = request.headers.get('stripe-signature') || '';
-    if (!(await verifyStripe(payload, signature, env.STRIPE_WEBHOOK_SECRET))) {
+    const secrets = webhookSecrets(env);
+    if (!secrets.length) return new Response('worker not configured', { status: 500 });
+    if (!(await verifyStripe(payload, signature, secrets))) {
+      console.log('bad signature', describeUnverified(payload));
       return new Response('bad signature', { status: 400 });
     }
 
@@ -69,16 +96,19 @@ export default {
     }
 
     if (event.type !== 'checkout.session.completed') {
+      console.log('ignored event', event.type);
       return new Response('ignored', { status: 200 });
     }
 
     const session = event.data.object || {};
     if (session.payment_status && session.payment_status !== 'paid') {
+      console.log('not paid', session.id, session.payment_status);
       return new Response('not paid', { status: 200 });
     }
 
     const email = (session.customer_details && session.customer_details.email) || session.customer_email;
     const domain = normalizeDomain(pickDomain(session));
+    console.log('session', session.id, 'domain', domain, 'email', email);
     if (!domain || !email) return new Response('missing domain or email', { status: 422 });
 
     const dispatch = await fetch(`https://api.github.com/repos/${env.GITHUB_REPO}/dispatches`, {
@@ -94,8 +124,10 @@ export default {
 
     if (!dispatch.ok) {
       const detail = await dispatch.text();
+      console.log('dispatch failed', dispatch.status, detail.slice(0, 200));
       return new Response(`dispatch failed: ${dispatch.status} ${detail.slice(0, 200)}`, { status: 502 });
     }
+    console.log('queued', domain);
     return new Response(`queued ${domain}`, { status: 200 });
   },
 };
