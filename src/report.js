@@ -94,6 +94,12 @@ function checkoutTarget() {
   return '#method';
 }
 
+function contactLine() {
+  if (!config.ownerEmail) return '';
+  const email = escapeHtml(config.ownerEmail);
+  return ` &middot; <a href="mailto:${email}">${email}</a>`;
+}
+
 export function renderLeaderboard(records, opts = {}) {
   const sorted = [...records].sort((a, b) => {
     const as = a.score == null ? -1 : a.score;
@@ -192,7 +198,7 @@ ${rows}
 </section>
 
 <div class="footer">
-CartSignal &middot; automated agent-commerce audits &middot; <a href="mailto:hello@cartsignal.dev">hello@cartsignal.dev</a>
+${escapeHtml(config.brand)} &middot; automated agent-commerce audits${contactLine()}
 </div>
 </div>
 </body></html>`;
