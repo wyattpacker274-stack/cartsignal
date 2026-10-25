@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T03:11:41.673Z",
+  "generatedAt": "2026-10-25T04:07:53.375Z",
   "records": [
     {
       "domain": "glossier.com",
@@ -15,7 +15,7 @@
         "logo": null,
         "sameAs": []
       },
-      "scannedAt": "2026-10-25T03:11:33.512Z",
+      "scannedAt": "2026-10-25T04:07:46.338Z",
       "score": 75,
       "grade": "B",
       "checks": [
@@ -157,7 +157,7 @@
         "logo": null,
         "sameAs": []
       },
-      "scannedAt": "2026-10-25T03:11:33.553Z",
+      "scannedAt": "2026-10-25T04:07:46.306Z",
       "score": 77,
       "grade": "B",
       "checks": [
@@ -298,7 +298,7 @@
         "logo": null,
         "sameAs": []
       },
-      "scannedAt": "2026-10-25T03:11:33.009Z",
+      "scannedAt": "2026-10-25T04:07:45.926Z",
       "blocked": true,
       "score": null,
       "grade": "N/A",
@@ -333,7 +333,7 @@
           "https://tiktok.com/@chubbiesshorts"
         ]
       },
-      "scannedAt": "2026-10-25T03:11:33.808Z",
+      "scannedAt": "2026-10-25T04:07:46.174Z",
       "score": 63,
       "grade": "C",
       "checks": [
@@ -468,7 +468,7 @@
         "logo": null,
         "sameAs": []
       },
-      "scannedAt": "2026-10-25T03:11:33.190Z",
+      "scannedAt": "2026-10-25T04:07:46.058Z",
       "blocked": true,
       "score": null,
       "grade": "N/A",
@@ -503,7 +503,7 @@
           "https://www.tiktok.com/@huel"
         ]
       },
-      "scannedAt": "2026-10-25T03:11:33.413Z",
+      "scannedAt": "2026-10-25T04:07:46.186Z",
       "score": 79,
       "grade": "B",
       "checks": [
@@ -658,7 +658,7 @@
           "https://www.youtube.com/c/Brooklinen"
         ]
       },
-      "scannedAt": "2026-10-25T03:11:34.709Z",
+      "scannedAt": "2026-10-25T04:07:46.778Z",
       "score": 77,
       "grade": "B",
       "checks": [
@@ -807,7 +807,7 @@
           "https://www.youtube.com/c/purple"
         ]
       },
-      "scannedAt": "2026-10-25T03:11:34.456Z",
+      "scannedAt": "2026-10-25T04:07:47.163Z",
       "score": 63,
       "grade": "C",
       "checks": [
@@ -923,9 +923,9 @@
           "label": "Server-rendered content",
           "max": 10,
           "earned": 10,
-          "note": "9625 visible characters in raw HTML.",
+          "note": "10662 visible characters in raw HTML.",
           "evidence": {
-            "chars": 9625
+            "chars": 10662
           }
         }
       ]
@@ -948,7 +948,7 @@
           "https://www.youtube.com/c/rothys"
         ]
       },
-      "scannedAt": "2026-10-25T03:11:35.364Z",
+      "scannedAt": "2026-10-25T04:07:48.078Z",
       "score": 97,
       "grade": "A",
       "checks": [
@@ -1105,7 +1105,7 @@
           "https://www.youtube.com/@away-travel"
         ]
       },
-      "scannedAt": "2026-10-25T03:11:35.490Z",
+      "scannedAt": "2026-10-25T04:07:48.683Z",
       "score": 95,
       "grade": "A",
       "checks": [
@@ -1228,7 +1228,7 @@
               "privacy"
             ],
             "urls": {
-              "returns": "https://www.awaytravel.com/customer_authentication/login?return_to=%2F%3Fsmsclickid%3Df699301c-e1f4-48dc-b622-0ec156a2d661%26utm_term%3Df699301c-e1f4-48dc-b622-0ec156a2d661&locale=en&ui_hint=full&region_country=US",
+              "returns": "https://www.awaytravel.com/customer_authentication/login?return_to=%2F&locale=en&ui_hint=full&region_country=US",
               "contact": "https://www.awaytravel.com/pages/contact",
               "privacy": "https://www.awaytravel.com/policies/privacy-policy"
             }
@@ -1268,7 +1268,7 @@
           "https://www.linkedin.com/company/casper/"
         ]
       },
-      "scannedAt": "2026-10-25T03:11:35.865Z",
+      "scannedAt": "2026-10-25T04:07:48.187Z",
       "score": 93,
       "grade": "A",
       "checks": [
@@ -1421,7 +1421,7 @@
         "logo": "https://cdn.shopify.com/s/images/admin/no-image-large.gif",
         "sameAs": []
       },
-      "scannedAt": "2026-10-25T03:11:36.790Z",
+      "scannedAt": "2026-10-25T04:07:48.937Z",
       "score": 97,
       "grade": "A",
       "checks": [
@@ -1580,7 +1580,7 @@
           "https://www.facebook.com/warbyparker"
         ]
       },
-      "scannedAt": "2026-10-25T03:11:37.194Z",
+      "scannedAt": "2026-10-25T04:07:49.648Z",
       "score": 64,
       "grade": "C",
       "checks": [
@@ -1717,7 +1717,7 @@
         "logo": null,
         "sameAs": []
       },
-      "scannedAt": "2026-10-25T03:11:36.915Z",
+      "scannedAt": "2026-10-25T04:07:49.217Z",
       "blocked": true,
       "score": null,
       "grade": "N/A",
@@ -1750,7 +1750,7 @@
           "https://x.com/ridgewallet"
         ]
       },
-      "scannedAt": "2026-10-25T03:11:37.584Z",
+      "scannedAt": "2026-10-25T04:07:49.789Z",
       "score": 92,
       "grade": "A",
       "checks": [
@@ -1896,7 +1896,7 @@
         "logo": null,
         "sameAs": []
       },
-      "scannedAt": "2026-10-25T03:11:37.943Z",
+      "scannedAt": "2026-10-25T04:07:49.749Z",
       "score": 22,
       "grade": "F",
       "checks": [
@@ -2017,7 +2017,7 @@
           "https://twitter.com/salesforcequip"
         ]
       },
-      "scannedAt": "2026-10-25T03:11:38.273Z",
+      "scannedAt": "2026-10-25T04:07:50.221Z",
       "score": 45,
       "grade": "D",
       "checks": [
@@ -2145,7 +2145,7 @@
         "logo": null,
         "sameAs": []
       },
-      "scannedAt": "2026-10-25T03:11:38.425Z",
+      "scannedAt": "2026-10-25T04:07:50.235Z",
       "blocked": true,
       "score": null,
       "grade": "N/A",
@@ -2182,7 +2182,7 @@
           "https://www.tiktok.com/@curology"
         ]
       },
-      "scannedAt": "2026-10-25T03:11:38.617Z",
+      "scannedAt": "2026-10-25T04:07:50.351Z",
       "score": 43,
       "grade": "D",
       "checks": [
@@ -2314,7 +2314,7 @@
         "logo": null,
         "sameAs": []
       },
-      "scannedAt": "2026-10-25T03:11:39.418Z",
+      "scannedAt": "2026-10-25T04:07:51.619Z",
       "score": 62,
       "grade": "C",
       "checks": [
@@ -2450,7 +2450,7 @@
         "logo": null,
         "sameAs": []
       },
-      "scannedAt": "2026-10-25T03:11:39.344Z",
+      "scannedAt": "2026-10-25T04:07:51.686Z",
       "score": 62,
       "grade": "C",
       "checks": [
@@ -2586,7 +2586,7 @@
         "logo": null,
         "sameAs": []
       },
-      "scannedAt": "2026-10-25T03:11:39.518Z",
+      "scannedAt": "2026-10-25T04:07:51.370Z",
       "blocked": false,
       "score": null,
       "grade": "F",
@@ -2625,7 +2625,7 @@
           ""
         ]
       },
-      "scannedAt": "2026-10-25T03:11:40.312Z",
+      "scannedAt": "2026-10-25T04:07:52.257Z",
       "score": 95,
       "grade": "A",
       "checks": [
@@ -2775,7 +2775,7 @@
         "logo": null,
         "sameAs": []
       },
-      "scannedAt": "2026-10-25T03:11:40.477Z",
+      "scannedAt": "2026-10-25T04:07:52.069Z",
       "score": 64,
       "grade": "C",
       "checks": [
