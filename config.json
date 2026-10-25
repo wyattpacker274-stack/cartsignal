@@ -4,7 +4,7 @@
   "ownerEmail": "",
   "fromEmail": "CartSignal <onboarding@resend.dev>",
   "vertical": "unset",
-  "checkoutUrl": "https://buy.stripe.com/test_aFa4gA5N52BTcFVbrwfnO00",
+  "checkoutUrl": "https://buy.stripe.com/test_3cI14oc6W4XXbkPcd95gc00",
   "scan": {
     "file": "data/sites.txt",
     "concurrency": 4
