@@ -2,7 +2,7 @@ name: cartsignal
 
 on:
   schedule:
-    - cron: '0 6 * * 1'
+    - cron: '0 14 * * 1'
   workflow_dispatch:
   repository_dispatch:
     types: [fulfill]
