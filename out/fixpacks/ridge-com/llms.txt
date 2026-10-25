@@ -1,6 +1,6 @@
 # Ridge
 
-> Ridge sells direct to customers online.
+> Discover thoughtful collections of elevated everyday essentials. Shop wallets, keycases, travel essentials, & more.
 
 Canonical storefront: https://ridge.com
 
@@ -20,3 +20,8 @@ Canonical storefront: https://ridge.com
 - Product pages carry schema.org Product JSON-LD with offers, price, currency, and availability.
 - Autonomous shopping agents may read this site's public catalog and policy pages.
 - Product identifiers include SKU so agents can match listings across merchants.
+
+## Elsewhere
+- https://facebook.com/ridge
+- https://instagram.com/ridge
+- https://x.com/ridgewallet

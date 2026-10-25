@@ -1,12 +1,22 @@
 {
   "domain": "warbyparker.com",
-  "score": null,
-  "grade": "N/A",
+  "score": 64,
+  "grade": "C",
   "steps": [
     {
-      "check": "Automated access blocked",
-      "delta": 100,
-      "action": "Review manually."
+      "check": "Product markup",
+      "delta": 20,
+      "action": "Emit complete Product JSON-LD from the product template."
+    },
+    {
+      "check": "Machine-readable catalog",
+      "delta": 11,
+      "action": "Sitemap is live; add a public JSON product feed with price, availability, and variants."
+    },
+    {
+      "check": "Agent-legible policies",
+      "delta": 5,
+      "action": "Link shipping, returns from server-rendered footer or nav markup."
     }
   ]
 }

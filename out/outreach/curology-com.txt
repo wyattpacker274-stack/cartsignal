@@ -9,11 +9,11 @@ curology.com scored 43/100. The largest gap: product markup — no product json-
 
 Concretely, that shows up as incomplete Product JSON-LD, so price and availability are unreadable.
 
-The public breakdown is here: http://localhost:4173/sites/curology-com.html
+The public breakdown is here: https://wyattpacker274-stack.github.io/cartsignal/sites/curology-com.html
 
 I built a specific fix pack for curology.com: the exact llms.txt, the robots.txt lines, the JSON-LD block, and the order to apply them. It takes a template change, not a rebuild.
 
 Want me to send it over?
 
 — CartSignal
-http://localhost:4173/
+https://wyattpacker274-stack.github.io/cartsignal/

@@ -1,9 +1,9 @@
 CartSignal scan — 2026-10-25
-2/3 reachable · mean 76 · 1 blocked
+19/24 reachable · mean 72 · 4 blocked
 
 First snapshot — no comparison yet.
 
-Top: allbirds.com 77, glossier.com 75
-Bottom: glossier.com 75, allbirds.com 77
+Top: rothys.com 97, untuckit.com 97, awaytravel.com 95
+Bottom: onsen.com 22, curology.com 43, quip.com 45
 
-http://localhost:4173/
+https://wyattpacker274-stack.github.io/cartsignal/

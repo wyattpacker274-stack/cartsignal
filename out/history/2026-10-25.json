@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T02:52:58.503Z",
+  "generatedAt": "2026-10-25T03:09:37.788Z",
   "records": [
     {
       "domain": "glossier.com",
@@ -15,7 +15,7 @@
         "logo": null,
         "sameAs": []
       },
-      "scannedAt": "2026-10-25T02:52:50.945Z",
+      "scannedAt": "2026-10-25T03:09:28.600Z",
       "score": 75,
       "grade": "B",
       "checks": [
@@ -157,7 +157,7 @@
         "logo": null,
         "sameAs": []
       },
-      "scannedAt": "2026-10-25T02:52:50.905Z",
+      "scannedAt": "2026-10-25T03:09:29.017Z",
       "score": 77,
       "grade": "B",
       "checks": [
@@ -298,7 +298,7 @@
         "logo": null,
         "sameAs": []
       },
-      "scannedAt": "2026-10-25T02:52:50.306Z",
+      "scannedAt": "2026-10-25T03:09:28.191Z",
       "blocked": true,
       "score": null,
       "grade": "N/A",
@@ -333,7 +333,7 @@
           "https://tiktok.com/@chubbiesshorts"
         ]
       },
-      "scannedAt": "2026-10-25T02:52:50.812Z",
+      "scannedAt": "2026-10-25T03:09:29.202Z",
       "score": 63,
       "grade": "C",
       "checks": [
@@ -468,7 +468,7 @@
         "logo": null,
         "sameAs": []
       },
-      "scannedAt": "2026-10-25T02:52:50.331Z",
+      "scannedAt": "2026-10-25T03:09:28.321Z",
       "blocked": true,
       "score": null,
       "grade": "N/A",
@@ -503,7 +503,7 @@
           "https://www.tiktok.com/@huel"
         ]
       },
-      "scannedAt": "2026-10-25T02:52:50.632Z",
+      "scannedAt": "2026-10-25T03:09:28.391Z",
       "score": 79,
       "grade": "B",
       "checks": [
@@ -658,7 +658,7 @@
           "https://www.youtube.com/c/Brooklinen"
         ]
       },
-      "scannedAt": "2026-10-25T02:52:51.171Z",
+      "scannedAt": "2026-10-25T03:09:30.377Z",
       "score": 77,
       "grade": "B",
       "checks": [
@@ -807,7 +807,7 @@
           "https://www.youtube.com/c/purple"
         ]
       },
-      "scannedAt": "2026-10-25T02:52:51.848Z",
+      "scannedAt": "2026-10-25T03:09:29.840Z",
       "score": 63,
       "grade": "C",
       "checks": [
@@ -886,7 +886,7 @@
           "label": "Product markup",
           "max": 20,
           "earned": 0,
-          "note": "No product URL discovered.",
+          "note": "No crawlable product page found.",
           "evidence": {}
         },
         {
@@ -948,7 +948,7 @@
           "https://www.youtube.com/c/rothys"
         ]
       },
-      "scannedAt": "2026-10-25T02:52:52.750Z",
+      "scannedAt": "2026-10-25T03:09:30.945Z",
       "score": 97,
       "grade": "A",
       "checks": [
@@ -1105,7 +1105,7 @@
           "https://www.youtube.com/@away-travel"
         ]
       },
-      "scannedAt": "2026-10-25T02:52:53.895Z",
+      "scannedAt": "2026-10-25T03:09:32.043Z",
       "score": 95,
       "grade": "A",
       "checks": [
@@ -1268,7 +1268,7 @@
           "https://www.linkedin.com/company/casper/"
         ]
       },
-      "scannedAt": "2026-10-25T02:52:53.246Z",
+      "scannedAt": "2026-10-25T03:09:31.260Z",
       "score": 93,
       "grade": "A",
       "checks": [
@@ -1421,7 +1421,7 @@
         "logo": "https://cdn.shopify.com/s/images/admin/no-image-large.gif",
         "sameAs": []
       },
-      "scannedAt": "2026-10-25T02:52:53.550Z",
+      "scannedAt": "2026-10-25T03:09:32.487Z",
       "score": 97,
       "grade": "A",
       "checks": [
@@ -1563,29 +1563,143 @@
     {
       "domain": "warbyparker.com",
       "origin": "https://www.warbyparker.com",
-      "status": 403,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "error": null,
       "platform": "Custom/Unknown",
       "meta": {
-        "title": "Warby Parker",
-        "description": "Warby Parker",
-        "orgName": null,
-        "logo": null,
-        "sameAs": []
+        "title": "Eyewear Online | We&#x27;ve Got Your Eyes Covered | Warby Parker",
+        "description": "Shop affordable, high-quality glasses, sunglasses, and contacts at Warby Parker. Frames starting at $95, including prescription lenses.",
+        "orgName": "Warby Parker",
+        "logo": "https://www.warbyparker.com/favicon.ico",
+        "sameAs": [
+          "https://www.youtube.com/warbyparker/",
+          "https://twitter.com/warbyparker",
+          "https://www.instagram.com/warbyparker/",
+          "https://www.tiktok.com/@warbyparker",
+          "https://www.facebook.com/warbyparker"
+        ]
       },
-      "scannedAt": "2026-10-25T02:52:53.350Z",
-      "blocked": true,
-      "score": null,
-      "grade": "N/A",
+      "scannedAt": "2026-10-25T03:09:33.023Z",
+      "score": 64,
+      "grade": "C",
       "checks": [
         {
-          "id": "reachable",
-          "label": "Automated access blocked",
-          "max": 100,
+          "id": "robots-ai",
+          "label": "AI crawler access",
+          "max": 20,
+          "earned": 20,
+          "note": "All major AI agents allowed.",
+          "evidence": {
+            "agents": [
+              {
+                "agent": "GPTBot",
+                "allowed": true,
+                "rule": null
+              },
+              {
+                "agent": "OAI-SearchBot",
+                "allowed": true,
+                "rule": null
+              },
+              {
+                "agent": "ClaudeBot",
+                "allowed": true,
+                "rule": null
+              },
+              {
+                "agent": "PerplexityBot",
+                "allowed": true,
+                "rule": null
+              },
+              {
+                "agent": "Google-Extended",
+                "allowed": true,
+                "rule": null
+              },
+              {
+                "agent": "Applebot-Extended",
+                "allowed": true,
+                "rule": null
+              }
+            ]
+          }
+        },
+        {
+          "id": "llms-txt",
+          "label": "llms.txt",
+          "max": 10,
+          "earned": 10,
+          "note": "Custom llms.txt present and structured.",
+          "evidence": {
+            "agentRails": false,
+            "autoGenerated": false,
+            "preview": "# Warby Parker\n\n> Warby Parker offers prescription eyeglasses, sunglasses, contact lenses, eye exams, prescription services, insurance support, and retail vision care online and in stores.\n\nWarby Parker is an eyewear and vision care company. Use the Markdown resources linked below as the preferred LLM-readable versions of Warby Parker's public pages.\n\nUse live Warby Parker HTML pages, booking flow"
+          }
+        },
+        {
+          "id": "home-schema",
+          "label": "Entity markup (home)",
+          "max": 15,
+          "earned": 15,
+          "note": "Found: Organization, WebSite, Navigation",
+          "evidence": {
+            "types": [
+              "Organization",
+              "Person",
+              "Place",
+              "PostalAddress",
+              "ContactPoint",
+              "MerchantReturnPolicy",
+              "WebSite",
+              "SearchAction"
+            ]
+          }
+        },
+        {
+          "id": "product-schema",
+          "label": "Product markup",
+          "max": 20,
           "earned": 0,
-          "note": "HTTP 403 to a plain automated request — a bot wall agents will also hit.",
+          "note": "No crawlable product page found.",
           "evidence": {}
+        },
+        {
+          "id": "catalog",
+          "label": "Machine-readable catalog",
+          "max": 15,
+          "earned": 4,
+          "note": "Feeds: sitemap",
+          "evidence": {
+            "sitemap": "ok"
+          }
+        },
+        {
+          "id": "policies",
+          "label": "Agent-legible policies",
+          "max": 10,
+          "earned": 5,
+          "note": "Linked: contact, privacy",
+          "evidence": {
+            "found": [
+              "contact",
+              "privacy"
+            ],
+            "urls": {
+              "contact": "https://www.warbyparker.com/contacts",
+              "privacy": "https://www.warbyparker.com/privacy-policy"
+            }
+          }
+        },
+        {
+          "id": "server-rendered",
+          "label": "Server-rendered content",
+          "max": 10,
+          "earned": 10,
+          "note": "2958 visible characters in raw HTML.",
+          "evidence": {
+            "chars": 2958
+          }
         }
       ]
     },
@@ -1603,7 +1717,7 @@
         "logo": null,
         "sameAs": []
       },
-      "scannedAt": "2026-10-25T02:52:53.674Z",
+      "scannedAt": "2026-10-25T03:09:32.398Z",
       "blocked": true,
       "score": null,
       "grade": "N/A",
@@ -1621,29 +1735,150 @@
     {
       "domain": "ridge.com",
       "origin": "https://ridge.com",
-      "status": 403,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "error": null,
-      "platform": "Custom/Unknown",
+      "platform": "Shopify",
       "meta": {
-        "title": "Attention Required! | Cloudflare",
-        "description": "",
-        "orgName": null,
-        "logo": null,
-        "sameAs": []
+        "title": "RIDGE® Official US Website | Elevate Your Everyday &ndash; Ridge",
+        "description": "Discover thoughtful collections of elevated everyday essentials. Shop wallets, keycases, travel essentials, & more.",
+        "orgName": "Ridge",
+        "logo": "https://ridge.com/cdn/shop/t/2516/assets/logo.png?v=446264",
+        "sameAs": [
+          "https://facebook.com/ridge",
+          "https://instagram.com/ridge",
+          "https://x.com/ridgewallet"
+        ]
       },
-      "scannedAt": "2026-10-25T02:52:54.057Z",
-      "blocked": true,
-      "score": null,
-      "grade": "N/A",
+      "scannedAt": "2026-10-25T03:09:32.865Z",
+      "score": 92,
+      "grade": "A",
       "checks": [
         {
-          "id": "reachable",
-          "label": "Automated access blocked",
-          "max": 100,
-          "earned": 0,
-          "note": "HTTP 403 to a plain automated request — a bot wall agents will also hit.",
-          "evidence": {}
+          "id": "robots-ai",
+          "label": "AI crawler access",
+          "max": 20,
+          "earned": 20,
+          "note": "All major AI agents allowed.",
+          "evidence": {
+            "agents": [
+              {
+                "agent": "GPTBot",
+                "allowed": true,
+                "rule": "allow: /"
+              },
+              {
+                "agent": "OAI-SearchBot",
+                "allowed": true,
+                "rule": "allow: /"
+              },
+              {
+                "agent": "ClaudeBot",
+                "allowed": true,
+                "rule": "allow: /"
+              },
+              {
+                "agent": "PerplexityBot",
+                "allowed": true,
+                "rule": "allow: /"
+              },
+              {
+                "agent": "Google-Extended",
+                "allowed": true,
+                "rule": "allow: /"
+              },
+              {
+                "agent": "Applebot-Extended",
+                "allowed": true,
+                "rule": "allow: /"
+              }
+            ]
+          }
+        },
+        {
+          "id": "llms-txt",
+          "label": "llms.txt",
+          "max": 10,
+          "earned": 10,
+          "note": "Auto-generated agent purchase guide (platform default).",
+          "evidence": {
+            "agentRails": true,
+            "autoGenerated": true,
+            "preview": "# Agent Instructions — Ridge\n\nYou can browse products and shop at Ridge's online store, https://ridge.com, on your user's behalf. This guide covers the Shop skill and UCP integration, directly or through browser-based WebMCP tools.\n\n## Shop skill — recommended\n\nUse the [Shop skill](https://shop.com/SKILL.md) to help your user shop with this store. Connect their Shop account for personalized discov"
+          }
+        },
+        {
+          "id": "home-schema",
+          "label": "Entity markup (home)",
+          "max": 15,
+          "earned": 12,
+          "note": "Found: Organization, WebSite",
+          "evidence": {
+            "types": [
+              "WebSite",
+              "Organization"
+            ]
+          }
+        },
+        {
+          "id": "product-schema",
+          "label": "Product markup",
+          "max": 20,
+          "earned": 20,
+          "note": "Complete core product fields.",
+          "evidence": {
+            "productUrl": "https://ridge.com/products/magsafe-wallet-power-bank-founder-spec",
+            "present": [
+              "name",
+              "price",
+              "currency",
+              "availability",
+              "image",
+              "sku/gtin"
+            ],
+            "missing": []
+          }
+        },
+        {
+          "id": "catalog",
+          "label": "Machine-readable catalog",
+          "max": 15,
+          "earned": 12,
+          "note": "Feeds: productsJson, sitemap",
+          "evidence": {
+            "productsJson": "ok",
+            "firstProductHandle": "magsafe-wallet-power-bank-founder-spec",
+            "sitemap": "ok"
+          }
+        },
+        {
+          "id": "policies",
+          "label": "Agent-legible policies",
+          "max": 10,
+          "earned": 8,
+          "note": "Linked: returns, contact, privacy",
+          "evidence": {
+            "found": [
+              "returns",
+              "contact",
+              "privacy"
+            ],
+            "urls": {
+              "returns": "https://ridge.com/pages/returns-exchanges",
+              "contact": "https://ridge.com/pages/contact",
+              "privacy": "https://ridge.com/policies/privacy-policy"
+            }
+          }
+        },
+        {
+          "id": "server-rendered",
+          "label": "Server-rendered content",
+          "max": 10,
+          "earned": 10,
+          "note": "6019 visible characters in raw HTML.",
+          "evidence": {
+            "chars": 6019
+          }
         }
       ]
     },
@@ -1661,7 +1896,7 @@
         "logo": null,
         "sameAs": []
       },
-      "scannedAt": "2026-10-25T02:52:54.714Z",
+      "scannedAt": "2026-10-25T03:09:33.418Z",
       "score": 22,
       "grade": "F",
       "checks": [
@@ -1731,7 +1966,7 @@
           "label": "Product markup",
           "max": 20,
           "earned": 0,
-          "note": "No product URL discovered.",
+          "note": "No crawlable product page found.",
           "evidence": {}
         },
         {
@@ -1782,7 +2017,7 @@
           "https://twitter.com/salesforcequip"
         ]
       },
-      "scannedAt": "2026-10-25T02:52:54.615Z",
+      "scannedAt": "2026-10-25T03:09:33.946Z",
       "score": 45,
       "grade": "D",
       "checks": [
@@ -1910,7 +2145,7 @@
         "logo": null,
         "sameAs": []
       },
-      "scannedAt": "2026-10-25T02:52:55.200Z",
+      "scannedAt": "2026-10-25T03:09:34.016Z",
       "blocked": true,
       "score": null,
       "grade": "N/A",
@@ -1947,7 +2182,7 @@
           "https://www.tiktok.com/@curology"
         ]
       },
-      "scannedAt": "2026-10-25T02:52:55.219Z",
+      "scannedAt": "2026-10-25T03:09:34.180Z",
       "score": 43,
       "grade": "D",
       "checks": [
@@ -2079,7 +2314,7 @@
         "logo": null,
         "sameAs": []
       },
-      "scannedAt": "2026-10-25T02:52:55.986Z",
+      "scannedAt": "2026-10-25T03:09:35.155Z",
       "score": 62,
       "grade": "C",
       "checks": [
@@ -2215,7 +2450,7 @@
         "logo": null,
         "sameAs": []
       },
-      "scannedAt": "2026-10-25T02:52:55.720Z",
+      "scannedAt": "2026-10-25T03:09:34.861Z",
       "score": 62,
       "grade": "C",
       "checks": [
@@ -2351,7 +2586,7 @@
         "logo": null,
         "sameAs": []
       },
-      "scannedAt": "2026-10-25T02:52:56.211Z",
+      "scannedAt": "2026-10-25T03:09:34.813Z",
       "blocked": false,
       "score": null,
       "grade": "F",
@@ -2390,7 +2625,7 @@
           ""
         ]
       },
-      "scannedAt": "2026-10-25T02:52:57.020Z",
+      "scannedAt": "2026-10-25T03:09:35.128Z",
       "score": 95,
       "grade": "A",
       "checks": [
@@ -2540,7 +2775,7 @@
         "logo": null,
         "sameAs": []
       },
-      "scannedAt": "2026-10-25T02:52:56.820Z",
+      "scannedAt": "2026-10-25T03:09:36.390Z",
       "score": 64,
       "grade": "C",
       "checks": [

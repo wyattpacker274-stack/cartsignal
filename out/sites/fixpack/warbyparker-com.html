@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Warbyparker — agent readiness fix pack</title>
+<title>Warby Parker — agent readiness fix pack</title>
 <style>
 :root{--bg:#0b0d10;--panel:#12161b;--line:#232a33;--ink:#e6e9ee;--muted:#8b97a6;--accent:#6ee7a8;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
 *{box-sizing:border-box}
@@ -16,13 +16,15 @@ th{color:var(--muted);font-weight:500;font-size:12px;letter-spacing:.06em;text-t
 pre{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px;overflow-x:auto;font:13px/1.6 var(--mono);color:#c9d3df}
 .badge{display:inline-block;font-family:var(--mono);font-size:12px;padding:3px 9px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
 </style></head><body><div class="wrap">
-<h1>Warbyparker</h1>
-<p class="sub">Agent-commerce fix pack for warbyparker.com &middot; score null/100 &middot; grade N/A &middot; <span class="badge">+100 points available</span></p>
+<h1>Warby Parker</h1>
+<p class="sub">Agent-commerce fix pack for warbyparker.com &middot; score 64/100 &middot; grade C &middot; <span class="badge">+36 points available</span></p>
 <h2>Do this, in order</h2>
-<table><thead><tr><th>Check</th><th>Gain</th><th>Action</th></tr></thead><tbody><tr><td>Automated access blocked</td><td class="num">+100</td><td>Review manually.</td></tr></tbody></table>
-<h2>llms.txt &rarr; site root</h2><pre># Warbyparker
+<table><thead><tr><th>Check</th><th>Gain</th><th>Action</th></tr></thead><tbody><tr><td>Product markup</td><td class="num">+20</td><td>Emit complete Product JSON-LD from the product template.</td></tr>
+<tr><td>Machine-readable catalog</td><td class="num">+11</td><td>Sitemap is live; add a public JSON product feed with price, availability, and variants.</td></tr>
+<tr><td>Agent-legible policies</td><td class="num">+5</td><td>Link shipping, returns from server-rendered footer or nav markup.</td></tr></tbody></table>
+<h2>llms.txt &rarr; site root</h2><pre># Warby Parker
 
-&gt; Warby Parker
+&gt; Shop affordable, high-quality glasses, sunglasses, and contacts at Warby Parker. Frames starting at $95, including prescription lenses.
 
 Canonical storefront: https://www.warbyparker.com
 
@@ -42,6 +44,13 @@ Canonical storefront: https://www.warbyparker.com
 - Product pages carry schema.org Product JSON-LD with offers, price, currency, and availability.
 - Autonomous shopping agents may read this site&#39;s public catalog and policy pages.
 - Product identifiers include SKU so agents can match listings across merchants.
+
+## Elsewhere
+- https://www.youtube.com/warbyparker/
+- https://twitter.com/warbyparker
+- https://www.instagram.com/warbyparker/
+- https://www.tiktok.com/@warbyparker
+- https://www.facebook.com/warbyparker
 </pre>
 <h2>robots.txt additions</h2><pre># --- CartSignal: agent access ---
 # Retrieval agents must be allowed to read products and policies.
@@ -67,9 +76,10 @@ Allow: /
 {
   &quot;@context&quot;: &quot;https://schema.org&quot;,
   &quot;@type&quot;: &quot;Organization&quot;,
-  &quot;name&quot;: &quot;Warbyparker&quot;,
+  &quot;name&quot;: &quot;Warby Parker&quot;,
   &quot;url&quot;: &quot;https://www.warbyparker.com&quot;,
-  &quot;description&quot;: &quot;Warby Parker&quot;,
+  &quot;description&quot;: &quot;Shop affordable, high-quality glasses, sunglasses, and contacts at Warby Parker. Frames starting at $95, including prescription lenses.&quot;,
+  &quot;logo&quot;: &quot;https://www.warbyparker.com/favicon.ico&quot;,
   &quot;contactPoint&quot;: [
     {
       &quot;@type&quot;: &quot;ContactPoint&quot;,
@@ -80,7 +90,13 @@ Allow: /
       ]
     }
   ],
-  &quot;sameAs&quot;: []
+  &quot;sameAs&quot;: [
+    &quot;https://www.youtube.com/warbyparker/&quot;,
+    &quot;https://twitter.com/warbyparker&quot;,
+    &quot;https://www.instagram.com/warbyparker/&quot;,
+    &quot;https://www.tiktok.com/@warbyparker&quot;,
+    &quot;https://www.facebook.com/warbyparker&quot;
+  ]
 }
 &lt;/script&gt;
 
@@ -97,7 +113,7 @@ Allow: /
   ],
   &quot;brand&quot;: {
     &quot;@type&quot;: &quot;Brand&quot;,
-    &quot;name&quot;: &quot;Warbyparker&quot;
+    &quot;name&quot;: &quot;Warby Parker&quot;
   },
   &quot;offers&quot;: {
     &quot;@type&quot;: &quot;Offer&quot;,
@@ -109,7 +125,7 @@ Allow: /
     &quot;priceValidUntil&quot;: &quot;2030-12-31&quot;,
     &quot;seller&quot;: {
       &quot;@type&quot;: &quot;Organization&quot;,
-      &quot;name&quot;: &quot;Warbyparker&quot;
+      &quot;name&quot;: &quot;Warby Parker&quot;
     }
   }
 }
