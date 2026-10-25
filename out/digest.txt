@@ -1,0 +1,9 @@
+CartSignal scan — 2026-10-25
+2/3 reachable · mean 76 · 1 blocked
+
+First snapshot — no comparison yet.
+
+Top: allbirds.com 77, glossier.com 75
+Bottom: glossier.com 75, allbirds.com 77
+
+http://localhost:4173/

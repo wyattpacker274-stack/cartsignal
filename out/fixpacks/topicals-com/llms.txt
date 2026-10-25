@@ -1,0 +1,22 @@
+# Topicals
+
+> Topicals sells direct to customers online.
+
+Canonical storefront: https://topicals.com
+
+## Catalog
+- [All products](https://topicals.com/products.json): public JSON catalog with price, availability, variants, and images.
+- [Sitemap](https://topicals.com/sitemap.xml): every indexable URL, including product pages.
+
+## Policies
+- [Shipping](https://topicals.com/policies/shipping-policy): dispatch windows, regions, and rates.
+- [Returns](https://topicals.com/policies/refund-policy): return window, condition, and refund timing.
+- [Privacy](https://topicals.com/policies/privacy-policy): data collected and how it is used.
+
+## Contact
+- [Support](https://topicals.com/pages/contact): human contact channel and response target.
+
+## Machine notes
+- Product pages carry schema.org Product JSON-LD with offers, price, currency, and availability.
+- Autonomous shopping agents may read this site's public catalog and policy pages.
+- Product identifiers include SKU so agents can match listings across merchants.

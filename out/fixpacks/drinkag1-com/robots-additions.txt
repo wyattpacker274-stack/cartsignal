@@ -1,0 +1,19 @@
+# --- CartSignal: agent access ---
+# Retrieval agents must be allowed to read products and policies.
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Training crawlers are a separate policy decision; retrieval is not.
+User-agent: GPTBot
+Allow: /
+
+# --- end CartSignal ---

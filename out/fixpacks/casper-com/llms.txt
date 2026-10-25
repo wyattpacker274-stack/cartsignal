@@ -1,0 +1,31 @@
+# Casper
+
+> Discover award-winning mattresses built for cooler, deeper sleep and lasting support. Shop Casper with free shipping & returns.
+
+Canonical storefront: https://casper.com
+
+## Catalog
+- [All products](https://casper.com/products.json): public JSON catalog with price, availability, variants, and images.
+- [Sitemap](https://casper.com/sitemap.xml): every indexable URL, including product pages.
+
+## Policies
+- [Shipping](https://casper.com/policies/shipping-policy): dispatch windows, regions, and rates.
+- [Returns](https://casper.com/policies/refund-policy): return window, condition, and refund timing.
+- [Privacy](https://casper.com/policies/privacy-policy): data collected and how it is used.
+
+## Contact
+- [Support](https://casper.com/pages/contact): human contact channel and response target.
+
+## Machine notes
+- Product pages carry schema.org Product JSON-LD with offers, price, currency, and availability.
+- Autonomous shopping agents may read this site's public catalog and policy pages.
+- Product identifiers include SKU so agents can match listings across merchants.
+
+## Elsewhere
+- https://www.facebook.com/Casper/
+- https://x.com/casper
+- https://www.instagram.com/casper/
+- https://www.threads.net/@casper
+- https://www.pinterest.com/caspersleep/
+- https://www.youtube.com/channel/UCvjxT5R3HviugBbIJQNkToQ
+- https://www.linkedin.com/company/casper/

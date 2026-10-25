@@ -1,0 +1,21 @@
+{
+  "brand": "CartSignal",
+  "baseUrl": "http://localhost:4173",
+  "ownerEmail": "",
+  "fromEmail": "CartSignal <onboarding@resend.dev>",
+  "vertical": "unset",
+  "checkoutUrl": "",
+  "scan": {
+    "file": "data/sites.txt",
+    "concurrency": 4
+  },
+  "pricing": {
+    "fixPack": 299,
+    "monitorMonthly": 49,
+    "currency": "usd"
+  },
+  "outreach": {
+    "threshold": 70,
+    "limit": 30
+  }
+}

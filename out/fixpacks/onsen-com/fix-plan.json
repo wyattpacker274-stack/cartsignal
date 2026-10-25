@@ -1,0 +1,37 @@
+{
+  "domain": "onsen.com",
+  "score": 22,
+  "grade": "F",
+  "steps": [
+    {
+      "check": "Product markup",
+      "delta": 20,
+      "action": "Emit complete Product JSON-LD from the product template."
+    },
+    {
+      "check": "Entity markup (home)",
+      "delta": 15,
+      "action": "Add Organization and WebSite JSON-LD to the home template. schema-block.html is the base."
+    },
+    {
+      "check": "Machine-readable catalog",
+      "delta": 15,
+      "action": "Expose a public product feed and include product URLs in sitemap.xml."
+    },
+    {
+      "check": "llms.txt",
+      "delta": 10,
+      "action": "Publish the generated llms.txt at the site root with real policy and support URLs."
+    },
+    {
+      "check": "Agent-legible policies",
+      "delta": 10,
+      "action": "Link shipping, returns, contact, privacy from server-rendered footer or nav markup."
+    },
+    {
+      "check": "Server-rendered content",
+      "delta": 8,
+      "action": "Server-render product copy and prices. Client-only hydration is invisible to most agents."
+    }
+  ]
+}

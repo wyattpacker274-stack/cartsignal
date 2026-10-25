@@ -1,0 +1,22 @@
+# Hims
+
+> Hims sells direct to customers online.
+
+Canonical storefront: https://www.hims.com
+
+## Catalog
+- [All products](https://www.hims.com/products.json): public JSON catalog with price, availability, variants, and images.
+- [Sitemap](https://www.hims.com/sitemap.xml): every indexable URL, including product pages.
+
+## Policies
+- [Shipping](https://www.hims.com/policies/shipping-policy): dispatch windows, regions, and rates.
+- [Returns](https://www.hims.com/policies/refund-policy): return window, condition, and refund timing.
+- [Privacy](https://www.hims.com/policies/privacy-policy): data collected and how it is used.
+
+## Contact
+- [Support](https://www.hims.com/pages/contact): human contact channel and response target.
+
+## Machine notes
+- Product pages carry schema.org Product JSON-LD with offers, price, currency, and availability.
+- Autonomous shopping agents may read this site's public catalog and policy pages.
+- Product identifiers include SKU so agents can match listings across merchants.

@@ -1,0 +1,32 @@
+{
+  "domain": "quip.com",
+  "score": 45,
+  "grade": "D",
+  "steps": [
+    {
+      "check": "Product markup",
+      "delta": 20,
+      "action": "Emit complete Product JSON-LD from the product template."
+    },
+    {
+      "check": "Machine-readable catalog",
+      "delta": 11,
+      "action": "Sitemap is live; add a public JSON product feed with price, availability, and variants."
+    },
+    {
+      "check": "llms.txt",
+      "delta": 10,
+      "action": "Publish the generated llms.txt at the site root with real policy and support URLs."
+    },
+    {
+      "check": "Entity markup (home)",
+      "delta": 7,
+      "action": "Add Organization and WebSite JSON-LD to the home template. schema-block.html is the base."
+    },
+    {
+      "check": "Agent-legible policies",
+      "delta": 7,
+      "action": "Link shipping, returns, privacy from server-rendered footer or nav markup."
+    }
+  ]
+}

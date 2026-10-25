@@ -1,0 +1,19 @@
+To: https://quip.com/about/contact
+Subject: quip.com scored 45/100 for AI shopping agents
+
+Hi — quick note about quip.com.
+
+I run CartSignal, a public index that scores storefronts on how well autonomous shopping agents can read and buy from them. The agents in ChatGPT, Perplexity, and Gemini increasingly fetch a store on a customer's behalf before a human ever opens the page.
+
+quip.com scored 45/100. The largest gap: product markup — no product json-ld on the product page.
+
+Concretely, that shows up as incomplete Product JSON-LD, so price and availability are unreadable.
+
+The public breakdown is here: http://localhost:4173/sites/quip-com.html
+
+I built a specific fix pack for quip.com: the exact llms.txt, the robots.txt lines, the JSON-LD block, and the order to apply them. It takes a template change, not a rebuild.
+
+Want me to send it over?
+
+— CartSignal
+http://localhost:4173/

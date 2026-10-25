@@ -1,0 +1,12 @@
+{
+  "domain": "topicals.com",
+  "score": null,
+  "grade": "F",
+  "steps": [
+    {
+      "check": "Reachable",
+      "delta": 100,
+      "action": "Review manually."
+    }
+  ]
+}

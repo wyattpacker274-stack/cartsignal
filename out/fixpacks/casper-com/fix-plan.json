@@ -1,0 +1,17 @@
+{
+  "domain": "casper.com",
+  "score": 93,
+  "grade": "A",
+  "steps": [
+    {
+      "check": "Entity markup (home)",
+      "delta": 4,
+      "action": "Add Organization and WebSite JSON-LD to the home template. schema-block.html is the base."
+    },
+    {
+      "check": "Machine-readable catalog",
+      "delta": 3,
+      "action": "Feed is live; publish a dedicated product sitemap so agents can enumerate every SKU."
+    }
+  ]
+}

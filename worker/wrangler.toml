@@ -1,0 +1,3 @@
+name = "cartsignal-stripe"
+main = "stripe-fulfill.js"
+compatibility_date = "2026-01-01"

@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>awaytravel.com — agent readiness 95/100</title>
+<style>
+:root{--bg:#0a0c0f;--panel:#111519;--panel2:#151a20;--line:#222a33;--ink:#e7eaef;--muted:#8a96a6;--dim:#5d6875;--accent:#6ee7a8;--warn:#f2b544;--bad:#ff7b72;--mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace}
+*{box-sizing:border-box}
+html{background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+header.top{border-bottom:1px solid var(--line);padding:18px 0;position:sticky;top:0;background:rgba(10,12,15,.86);backdrop-filter:blur(10px);z-index:10}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.mark{display:flex;align-items:center;gap:10px;font-weight:600;letter-spacing:-.01em}
+.mark span.dot{width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 14px rgba(110,231,168,.7)}
+.top nav{display:flex;gap:22px;font-size:13px;color:var(--muted)}
+.top nav a:hover{color:var(--ink)}
+.hero{padding:64px 0 40px;border-bottom:1px solid var(--line)}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin:0 0 18px}
+h1{font-size:clamp(32px,5vw,54px);line-height:1.06;letter-spacing:-.035em;margin:0 0 18px;font-weight:600;max-width:15ch}
+.lede{color:var(--muted);font-size:17px;max-width:62ch;margin:0 0 28px}
+.stats{display:flex;flex-wrap:wrap;gap:34px;margin-top:34px}
+.stat b{display:block;font-family:var(--mono);font-size:26px;font-weight:500;letter-spacing:-.02em}
+.stat span{font-size:12px;color:var(--dim);letter-spacing:.04em;text-transform:uppercase}
+section{padding:44px 0}
+h2{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:600;margin:0 0 18px}
+table.grid{width:100%;border-collapse:collapse;font-size:14px}
+.grid th{text-align:left;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);font-weight:500;padding:0 12px 12px;border-bottom:1px solid var(--line)}
+.grid td{padding:13px 12px;border-bottom:1px solid #191e24;vertical-align:middle}
+.grid tr:hover td{background:#0e1216}
+.grid td.rank{font-family:var(--mono);color:var(--dim);width:52px}
+.grid td.dom{font-weight:500}
+.grid td.dom small{display:block;color:var(--dim);font-weight:400;font-size:12px;margin-top:2px}
+.bar{height:5px;background:#1b222a;border-radius:99px;overflow:hidden;min-width:110px}
+.bar i{display:block;height:100%;border-radius:99px}
+.scorecell{display:flex;align-items:center;gap:12px;min-width:190px}
+.scorecell b{font-family:var(--mono);font-weight:500;width:34px;text-align:right}
+.grade{font-family:var(--mono);font-size:12px;padding:2px 8px;border-radius:5px;border:1px solid}
+.gA{color:#6ee7a8;border-color:#245c42;background:#0f1c16}
+.gB{color:#9ad8ff;border-color:#24485c;background:#0d171d}
+.gC{color:#f2b544;border-color:#5c4524;background:#1d170d}
+.gD{color:#ff9e64;border-color:#5c3824;background:#1d120d}
+.gF{color:#ff7b72;border-color:#5c2424;background:#1d0d0d}
+.gN{color:#8a96a6;border-color:#2b343f;background:#12161b}
+.gap{color:var(--muted);font-size:13px}
+.footer{border-top:1px solid var(--line);padding:40px 0 70px;color:var(--dim);font-size:13px}
+.footer a{color:var(--muted);border-bottom:1px solid #2b343f}
+.detail{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:44px;padding:56px 0 80px;align-items:start}
+@media(max-width:820px){.detail{grid-template-columns:1fr}}
+.ring{position:relative;width:190px;height:190px;margin:0 auto 26px}
+.ring svg{transform:rotate(-90deg)}
+.ring .num{position:absolute;inset:0;display:grid;place-content:center;text-align:center}
+.ring .num b{font-family:var(--mono);font-size:44px;font-weight:500;letter-spacing:-.03em;display:block;line-height:1}
+.ring .num span{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+.side{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:26px;position:sticky;top:96px}
+.side dl{margin:0;display:grid;grid-template-columns:1fr auto;gap:10px 12px;font-size:13px}
+.side dt{color:var(--dim)}
+.side dd{margin:0;text-align:right;font-family:var(--mono);font-size:12px}
+.side hr{border:0;border-top:1px solid var(--line);margin:20px 0}
+.cta{display:block;text-align:center;background:var(--accent);color:#062015;font-weight:600;font-size:13px;padding:11px 14px;border-radius:8px;margin-top:18px}
+.cta:hover{filter:brightness(1.08)}
+.check{border:1px solid var(--line);border-radius:12px;padding:20px 22px;margin-bottom:12px;background:var(--panel)}
+.check .row{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:10px}
+.check h3{margin:0;font-size:15px;font-weight:500;letter-spacing:-.01em}
+.check .pts{font-family:var(--mono);font-size:12px;color:var(--dim);white-space:nowrap}
+.check .pts b{color:var(--ink);font-weight:500;font-size:14px}
+.check p{margin:8px 0 0;color:var(--muted);font-size:13.5px}
+.mono{font-family:var(--mono);font-size:12px;color:var(--dim);margin-top:10px;white-space:pre-wrap;word-break:break-word}
+.checks-list{display:grid;gap:0}
+.pill{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
+.back{font-size:13px;color:var(--muted)}
+.back:hover{color:var(--ink)}
+.method{max-width:70ch;color:var(--muted);font-size:14px}
+.method li{margin-bottom:8px}
+</style></head>
+<body>
+<header class="top"><div class="wrap">
+<div class="mark"><a href="../index.html" style="display:flex;align-items:center;gap:10px"><span class="dot"></span>CartSignal</a></div>
+<nav><a href="../index.html">Index</a><a href="../index.html#method">Method</a></nav>
+</div></header>
+
+<div class="wrap">
+<div style="padding-top:34px"><a class="back" href="../index.html">&larr; all storefronts</a></div>
+<div class="detail">
+<main>
+<h1 style="font-size:34px;max-width:none;margin-bottom:10px">awaytravel.com</h1>
+<p class="lede" style="margin-bottom:18px">Away: Built for modern travel</p>
+<p style="margin-bottom:34px"><span class="pill">Shopify</span> <span class="pill" style="color:var(--accent);border-color:#245c42">agent checkout rails detected</span></p>
+<h2>Score breakdown</h2>
+<div class="checks-list">
+<div class="check">
+<div class="row"><h3>AI crawler access</h3><div class="pts"><b>20</b> / 20</div></div>
+<div class="bar"><i style="width:100%;background:var(--accent)"></i></div>
+<p>All major AI agents allowed.</p>
+<div class="mono">{
+  &quot;agents&quot;: [
+    {
+      &quot;agent&quot;: &quot;GPTBot&quot;,
+      &quot;allowed&quot;: true,
+      &quot;rule&quot;: &quot;allow: /&quot;
+    },
+    {
+      &quot;agent&quot;: &quot;OAI-SearchBot&quot;,
+      &quot;allowed&quot;: true,
+      &quot;rule&quot;: &quot;allow: /&quot;
+    },
+    {
+      &quot;agent&quot;: &quot;ClaudeBot&quot;,
+      &quot;allowed&quot;: true,
+      &quot;rule&quot;: &quot;allow: /&quot;
+    },
+    {
+      &quot;agent&quot;: &quot;PerplexityBot&quot;,
+      &quot;allowed&quot;: true,
+      &quot;rule&quot;: &quot;allow: /&quot;
+    },
+    {
+      &quot;agent&quot;: &quot;Google-Extended&quot;,
+      &quot;allowed&quot;: true,
+      &quot;rule&quot;: &quot;allow: /&quot;
+    },
+    {
+      &quot;agent&quot;: &quot;Applebot-Extended&quot;,
+      &quot;allowed&quot;: true,
+      &quot;rule&quot;: null
+    }
+  ]
+}</div>
+</div>
+<div class="check">
+<div class="row"><h3>Product markup</h3><div class="pts"><b>20</b> / 20</div></div>
+<div class="bar"><i style="width:100%;background:var(--accent)"></i></div>
+<p>Complete core product fields.</p>
+<div class="mono">{
+  &quot;productUrl&quot;: &quot;https://www.awaytravel.com/products/luggage-tag-sea-green&quot;,
+  &quot;present&quot;: [
+    &quot;name&quot;,
+    &quot;price&quot;,
+    &quot;currency&quot;,
+    &quot;availability&quot;,
+    &quot;image&quot;,
+    &quot;sku/gtin&quot;
+  ],
+  &quot;missing&quot;: []
+}</div>
+</div>
+<div class="check">
+<div class="row"><h3>Entity markup (home)</h3><div class="pts"><b>15</b> / 15</div></div>
+<div class="bar"><i style="width:100%;background:var(--accent)"></i></div>
+<p>Found: Organization, WebSite, Navigation</p>
+<div class="mono">{
+  &quot;types&quot;: [
+    &quot;Organization&quot;,
+    &quot;PostalAddress&quot;,
+    &quot;ContactPoint&quot;,
+    &quot;QuantitativeValue&quot;,
+    &quot;Place&quot;,
+    &quot;Person&quot;,
+    &quot;MerchantReturnPolicy&quot;,
+    &quot;WebSite&quot;,
+    &quot;SearchAction&quot;,
+    &quot;EntryPoint&quot;,
+    &quot;SiteNavigationElement&quot;
+  ]
+}</div>
+</div>
+<div class="check">
+<div class="row"><h3>Machine-readable catalog</h3><div class="pts"><b>12</b> / 15</div></div>
+<div class="bar"><i style="width:80%;background:var(--accent)"></i></div>
+<p>Feeds: productsJson, sitemap</p>
+<div class="mono">{
+  &quot;productsJson&quot;: &quot;ok&quot;,
+  &quot;firstProductHandle&quot;: &quot;luggage-tag-sea-green&quot;,
+  &quot;sitemap&quot;: &quot;ok&quot;
+}</div>
+</div>
+<div class="check">
+<div class="row"><h3>llms.txt</h3><div class="pts"><b>10</b> / 10</div></div>
+<div class="bar"><i style="width:100%;background:var(--accent)"></i></div>
+<p>Auto-generated agent purchase guide (platform default).</p>
+<div class="mono">{
+  &quot;agentRails&quot;: true,
+  &quot;autoGenerated&quot;: true,
+  &quot;preview&quot;: &quot;# Agent Instructions — Away\n\nAway designs and sells hardside and softside luggage, travel bags, and packing\naccessories, direct to consumer at https://www.awaytravel.com.\n\n## What we sell\n\nSuitcases and travel gear for frequent flyers, families, and business\ntravelers. Classic hardside shells are polycarbonate. Softside shells are\nhigh-strength nylon. Bags ship with Travel Sentry approved combinat&quot;
+}</div>
+</div>
+<div class="check">
+<div class="row"><h3>Agent-legible policies</h3><div class="pts"><b>8</b> / 10</div></div>
+<div class="bar"><i style="width:80%;background:var(--accent)"></i></div>
+<p>Linked: returns, contact, privacy</p>
+<div class="mono">{
+  &quot;found&quot;: [
+    &quot;returns&quot;,
+    &quot;contact&quot;,
+    &quot;privacy&quot;
+  ],
+  &quot;urls&quot;: {
+    &quot;returns&quot;: &quot;https://www.awaytravel.com/customer_authentication/login?return_to=%2F&amp;locale=en&amp;ui_hint=full&amp;region_country=US&quot;,
+    &quot;contact&quot;: &quot;https://www.awaytravel.com/pages/contact&quot;,
+    &quot;privacy&quot;: &quot;https://www.awaytravel.com/policies/privacy-policy&quot;
+  }
+}</div>
+</div>
+<div class="check">
+<div class="row"><h3>Server-rendered content</h3><div class="pts"><b>10</b> / 10</div></div>
+<div class="bar"><i style="width:100%;background:var(--accent)"></i></div>
+<p>13865 visible characters in raw HTML.</p>
+<div class="mono">{
+  &quot;chars&quot;: 13865
+}</div>
+</div>
+</div>
+</main>
+<aside class="side">
+<div class="ring">
+<svg width="190" height="190" viewBox="0 0 84 84">
+<circle cx="42" cy="42" r="34" fill="none" stroke="#1b222a" stroke-width="6"/>
+<circle cx="42" cy="42" r="34" fill="none" stroke="var(--accent)" stroke-width="6" stroke-linecap="round" stroke-dasharray="202.9 213.6"/>
+</svg>
+<div class="num"><b>95</b><span>of 100</span></div>
+</div>
+<dl>
+<dt>Grade</dt><dd><span class="grade gA">A</span></dd>
+<dt>Platform</dt><dd>Shopify</dd>
+<dt>Status</dt><dd>200</dd>
+<dt>Scanned</dt><dd>2026-10-25</dd>
+<dt>Available</dt><dd style="color:var(--accent)">+5</dd>
+</dl>
+<hr>
+<a class="cta" href="fixpack/awaytravel-com.html">Open fix pack &rarr;</a>
+</aside>
+</div>
+
+<section>
+<h2>Fix plan &middot; +5 points</h2>
+<div style="overflow-x:auto"><table class="grid">
+<thead><tr><th>#</th><th>Check</th><th>Gain</th><th>Action</th></tr></thead>
+<tbody><tr><td class="rank">01</td><td>Machine-readable catalog</td><td class="num" style="color:var(--accent);font-family:var(--mono)">+3</td><td>Feed is live; publish a dedicated product sitemap so agents can enumerate every SKU.</td></tr>
+<tr><td class="rank">02</td><td>Agent-legible policies</td><td class="num" style="color:var(--accent);font-family:var(--mono)">+2</td><td>Link shipping from server-rendered footer or nav markup.</td></tr></tbody>
+</table></div>
+</section>
+
+<div class="footer">CartSignal &middot; awaytravel.com &middot; automated audit</div>
+</div>
+</body></html>

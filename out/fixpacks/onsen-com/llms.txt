@@ -1,0 +1,22 @@
+# Onsen
+
+> Onsen sells direct to customers online.
+
+Canonical storefront: https://onsen.com
+
+## Catalog
+- [All products](https://onsen.com/products.json): public JSON catalog with price, availability, variants, and images.
+- [Sitemap](https://onsen.com/sitemap.xml): every indexable URL, including product pages.
+
+## Policies
+- [Shipping](https://onsen.com/policies/shipping-policy): dispatch windows, regions, and rates.
+- [Returns](https://onsen.com/policies/refund-policy): return window, condition, and refund timing.
+- [Privacy](https://onsen.com/policies/privacy-policy): data collected and how it is used.
+
+## Contact
+- [Support](https://onsen.com/pages/contact): human contact channel and response target.
+
+## Machine notes
+- Product pages carry schema.org Product JSON-LD with offers, price, currency, and availability.
+- Autonomous shopping agents may read this site's public catalog and policy pages.
+- Product identifiers include SKU so agents can match listings across merchants.

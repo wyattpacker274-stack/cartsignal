@@ -1,0 +1,14 @@
+{
+  "name": "cartsignal",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Agent-commerce readiness index: score storefronts for autonomous shopping agents.",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "scan": "node src/cli.js scan",
+    "fix": "node src/cli.js fixpack"
+  }
+}

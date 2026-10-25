@@ -1,0 +1,27 @@
+{
+  "domain": "huel.com",
+  "score": 79,
+  "grade": "B",
+  "steps": [
+    {
+      "check": "Machine-readable catalog",
+      "delta": 11,
+      "action": "Sitemap is live; add a public JSON product feed with price, availability, and variants."
+    },
+    {
+      "check": "llms.txt",
+      "delta": 5,
+      "action": "Publish the generated llms.txt at the site root with real policy and support URLs."
+    },
+    {
+      "check": "Entity markup (home)",
+      "delta": 3,
+      "action": "Add Organization and WebSite JSON-LD to the home template. schema-block.html is the base."
+    },
+    {
+      "check": "Agent-legible policies",
+      "delta": 2,
+      "action": "Link returns from server-rendered footer or nav markup."
+    }
+  ]
+}

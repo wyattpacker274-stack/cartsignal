@@ -1,0 +1,22 @@
+# Starface
+
+> Starface hydrocolloid pimple patches shrink pimples and reduce redness while powerful skincare minimizes breakouts and lip balm hydrates and moisturizes lips!
+
+Canonical storefront: https://starface.world
+
+## Catalog
+- [All products](https://starface.world/products.json): public JSON catalog with price, availability, variants, and images.
+- [Sitemap](https://starface.world/sitemap.xml): every indexable URL, including product pages.
+
+## Policies
+- [Shipping](https://starface.world/policies/shipping-policy): dispatch windows, regions, and rates.
+- [Returns](https://starface.world/policies/refund-policy): return window, condition, and refund timing.
+- [Privacy](https://starface.world/policies/privacy-policy): data collected and how it is used.
+
+## Contact
+- [Support](https://starface.world/pages/contact): human contact channel and response target.
+
+## Machine notes
+- Product pages carry schema.org Product JSON-LD with offers, price, currency, and availability.
+- Autonomous shopping agents may read this site's public catalog and policy pages.
+- Product identifiers include SKU so agents can match listings across merchants.

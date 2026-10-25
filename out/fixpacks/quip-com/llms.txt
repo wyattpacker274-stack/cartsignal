@@ -1,0 +1,26 @@
+# Quip
+
+> Quip is real-time collaborative documents, spreadsheets, and chat embedded inside Salesforce to transform any business process.
+
+Canonical storefront: https://quip.com
+
+## Catalog
+- [All products](https://quip.com/products.json): public JSON catalog with price, availability, variants, and images.
+- [Sitemap](https://quip.com/sitemap.xml): every indexable URL, including product pages.
+
+## Policies
+- [Shipping](https://quip.com/policies/shipping-policy): dispatch windows, regions, and rates.
+- [Returns](https://quip.com/policies/refund-policy): return window, condition, and refund timing.
+- [Privacy](https://quip.com/policies/privacy-policy): data collected and how it is used.
+
+## Contact
+- [Support](https://quip.com/pages/contact): human contact channel and response target.
+
+## Machine notes
+- Product pages carry schema.org Product JSON-LD with offers, price, currency, and availability.
+- Autonomous shopping agents may read this site's public catalog and policy pages.
+- Product identifiers include SKU so agents can match listings across merchants.
+
+## Elsewhere
+- https://www.facebook.com/salesforcequip
+- https://twitter.com/salesforcequip

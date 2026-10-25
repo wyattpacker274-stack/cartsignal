@@ -1,0 +1,30 @@
+# Brooklinen
+
+> Discover Brooklinen’s premium bedding collection. Shop soft sheets, cozy comforters, and soft & firm supportive pillows designed for the best night’s sleep.
+
+Canonical storefront: https://www.brooklinen.com
+
+## Catalog
+- [All products](https://www.brooklinen.com/products.json): public JSON catalog with price, availability, variants, and images.
+- [Sitemap](https://www.brooklinen.com/sitemap.xml): every indexable URL, including product pages.
+
+## Policies
+- [Shipping](https://www.brooklinen.com/policies/shipping-policy): dispatch windows, regions, and rates.
+- [Returns](https://www.brooklinen.com/policies/refund-policy): return window, condition, and refund timing.
+- [Privacy](https://www.brooklinen.com/policies/privacy-policy): data collected and how it is used.
+
+## Contact
+- [Support](https://www.brooklinen.com/pages/contact): human contact channel and response target.
+
+## Machine notes
+- Product pages carry schema.org Product JSON-LD with offers, price, currency, and availability.
+- Autonomous shopping agents may read this site's public catalog and policy pages.
+- Product identifiers include SKU so agents can match listings across merchants.
+
+## Elsewhere
+- https://x.com/brooklinen
+- https://www.facebook.com/Brooklinen/
+- https://www.pinterest.com/brooklinen/
+- https://www.instagram.com/brooklinen/
+- https://www.tiktok.com/@brooklinen
+- https://www.youtube.com/c/Brooklinen

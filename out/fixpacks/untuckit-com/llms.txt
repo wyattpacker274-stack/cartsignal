@@ -1,0 +1,22 @@
+# UNTUCKit
+
+> Casual men's shirts designed to be worn untucked. Regular and Slim fit button-downs, sweaters, tees, henleys and polos. Now offering Women's button-down shirts.
+
+Canonical storefront: https://www.untuckit.com
+
+## Catalog
+- [All products](https://www.untuckit.com/products.json): public JSON catalog with price, availability, variants, and images.
+- [Sitemap](https://www.untuckit.com/sitemap.xml): every indexable URL, including product pages.
+
+## Policies
+- [Shipping](https://www.untuckit.com/policies/shipping-policy): dispatch windows, regions, and rates.
+- [Returns](https://www.untuckit.com/policies/refund-policy): return window, condition, and refund timing.
+- [Privacy](https://www.untuckit.com/policies/privacy-policy): data collected and how it is used.
+
+## Contact
+- [Support](https://www.untuckit.com/pages/contact): human contact channel and response target.
+
+## Machine notes
+- Product pages carry schema.org Product JSON-LD with offers, price, currency, and availability.
+- Autonomous shopping agents may read this site's public catalog and policy pages.
+- Product identifiers include SKU so agents can match listings across merchants.

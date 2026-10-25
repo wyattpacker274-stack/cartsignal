@@ -1,0 +1,22 @@
+# Oliveandjune
+
+> Olive & June believes in beautiful nails for everyone. No matter who you are, you can have a manicure that makes you feel like your very best self. We’re bringing all of the mani and pedi magic to you - elevating the at-home nail experience like never before with award-winning polish, gel and press-ons.
+
+Canonical storefront: https://oliveandjune.com
+
+## Catalog
+- [All products](https://oliveandjune.com/products.json): public JSON catalog with price, availability, variants, and images.
+- [Sitemap](https://oliveandjune.com/sitemap.xml): every indexable URL, including product pages.
+
+## Policies
+- [Shipping](https://oliveandjune.com/policies/shipping-policy): dispatch windows, regions, and rates.
+- [Returns](https://oliveandjune.com/policies/refund-policy): return window, condition, and refund timing.
+- [Privacy](https://oliveandjune.com/policies/privacy-policy): data collected and how it is used.
+
+## Contact
+- [Support](https://oliveandjune.com/pages/contact): human contact channel and response target.
+
+## Machine notes
+- Product pages carry schema.org Product JSON-LD with offers, price, currency, and availability.
+- Autonomous shopping agents may read this site's public catalog and policy pages.
+- Product identifiers include SKU so agents can match listings across merchants.

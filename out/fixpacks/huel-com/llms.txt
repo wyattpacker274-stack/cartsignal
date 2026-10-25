@@ -1,0 +1,29 @@
+# Huel
+
+> Huel is nutritionally complete food, providing you with all 27 essential vitamins and minerals, protein, essential fats, carbs, fiber and phytonutrients.
+
+Canonical storefront: https://huel.com
+
+## Catalog
+- [All products](https://huel.com/products.json): public JSON catalog with price, availability, variants, and images.
+- [Sitemap](https://huel.com/sitemap.xml): every indexable URL, including product pages.
+
+## Policies
+- [Shipping](https://huel.com/policies/shipping-policy): dispatch windows, regions, and rates.
+- [Returns](https://huel.com/policies/refund-policy): return window, condition, and refund timing.
+- [Privacy](https://huel.com/policies/privacy-policy): data collected and how it is used.
+
+## Contact
+- [Support](https://huel.com/pages/contact): human contact channel and response target.
+
+## Machine notes
+- Product pages carry schema.org Product JSON-LD with offers, price, currency, and availability.
+- Autonomous shopping agents may read this site's public catalog and policy pages.
+- Product identifiers include SKU so agents can match listings across merchants.
+
+## Elsewhere
+- https://www.facebook.com/Huel
+- https://www.instagram.com/huel
+- https://x.com/huel
+- https://uk.linkedin.com/company/huel
+- https://www.tiktok.com/@huel

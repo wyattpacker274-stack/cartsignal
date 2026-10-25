@@ -1,0 +1,22 @@
+{
+  "domain": "starface.world",
+  "score": 62,
+  "grade": "C",
+  "steps": [
+    {
+      "check": "Product markup",
+      "delta": 20,
+      "action": "Emit complete Product JSON-LD from the product template."
+    },
+    {
+      "check": "Entity markup (home)",
+      "delta": 15,
+      "action": "Add Organization and WebSite JSON-LD to the home template. schema-block.html is the base."
+    },
+    {
+      "check": "Machine-readable catalog",
+      "delta": 3,
+      "action": "Feed is live; publish a dedicated product sitemap so agents can enumerate every SKU."
+    }
+  ]
+}

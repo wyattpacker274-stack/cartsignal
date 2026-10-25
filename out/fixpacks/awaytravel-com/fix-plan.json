@@ -1,0 +1,17 @@
+{
+  "domain": "awaytravel.com",
+  "score": 95,
+  "grade": "A",
+  "steps": [
+    {
+      "check": "Machine-readable catalog",
+      "delta": 3,
+      "action": "Feed is live; publish a dedicated product sitemap so agents can enumerate every SKU."
+    },
+    {
+      "check": "Agent-legible policies",
+      "delta": 2,
+      "action": "Link shipping from server-rendered footer or nav markup."
+    }
+  ]
+}

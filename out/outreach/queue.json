@@ -1,0 +1,102 @@
+{
+  "generatedAt": "2026-10-25T02:54:14.286Z",
+  "count": 8,
+  "queue": [
+    {
+      "domain": "onsen.com",
+      "score": 22,
+      "grade": "F",
+      "platform": "Custom/Unknown",
+      "topGap": "Product markup",
+      "topGapDelta": 20,
+      "contactUrl": null,
+      "publicPage": "http://localhost:4173/sites/onsen-com.html",
+      "subject": "onsen.com scored 22/100 for AI shopping agents",
+      "body": "Hi — quick note about onsen.com.\n\nI run CartSignal, a public index that scores storefronts on how well autonomous shopping agents can read and buy from them. The agents in ChatGPT, Perplexity, and Gemini increasingly fetch a store on a customer's behalf before a human ever opens the page.\n\nonsen.com scored 22/100. The largest gap: product markup — no product url discovered.\n\nConcretely, that shows up as incomplete Product JSON-LD, so price and availability are unreadable.\n\nThe public breakdown is here: http://localhost:4173/sites/onsen-com.html\n\nI built a specific fix pack for onsen.com: the exact llms.txt, the robots.txt lines, the JSON-LD block, and the order to apply them. It takes a template change, not a rebuild.\n\nWant me to send it over?\n\n— CartSignal\nhttp://localhost:4173/"
+    },
+    {
+      "domain": "curology.com",
+      "score": 43,
+      "grade": "D",
+      "platform": "Custom/Unknown",
+      "topGap": "Product markup",
+      "topGapDelta": 20,
+      "contactUrl": "https://curology.com/contact-us/",
+      "publicPage": "http://localhost:4173/sites/curology-com.html",
+      "subject": "curology.com scored 43/100 for AI shopping agents",
+      "body": "Hi — quick note about curology.com.\n\nI run CartSignal, a public index that scores storefronts on how well autonomous shopping agents can read and buy from them. The agents in ChatGPT, Perplexity, and Gemini increasingly fetch a store on a customer's behalf before a human ever opens the page.\n\ncurology.com scored 43/100. The largest gap: product markup — no product json-ld on the product page.\n\nConcretely, that shows up as incomplete Product JSON-LD, so price and availability are unreadable.\n\nThe public breakdown is here: http://localhost:4173/sites/curology-com.html\n\nI built a specific fix pack for curology.com: the exact llms.txt, the robots.txt lines, the JSON-LD block, and the order to apply them. It takes a template change, not a rebuild.\n\nWant me to send it over?\n\n— CartSignal\nhttp://localhost:4173/"
+    },
+    {
+      "domain": "quip.com",
+      "score": 45,
+      "grade": "D",
+      "platform": "Custom/Unknown",
+      "topGap": "Product markup",
+      "topGapDelta": 20,
+      "contactUrl": "https://quip.com/about/contact",
+      "publicPage": "http://localhost:4173/sites/quip-com.html",
+      "subject": "quip.com scored 45/100 for AI shopping agents",
+      "body": "Hi — quick note about quip.com.\n\nI run CartSignal, a public index that scores storefronts on how well autonomous shopping agents can read and buy from them. The agents in ChatGPT, Perplexity, and Gemini increasingly fetch a store on a customer's behalf before a human ever opens the page.\n\nquip.com scored 45/100. The largest gap: product markup — no product json-ld on the product page.\n\nConcretely, that shows up as incomplete Product JSON-LD, so price and availability are unreadable.\n\nThe public breakdown is here: http://localhost:4173/sites/quip-com.html\n\nI built a specific fix pack for quip.com: the exact llms.txt, the robots.txt lines, the JSON-LD block, and the order to apply them. It takes a template change, not a rebuild.\n\nWant me to send it over?\n\n— CartSignal\nhttp://localhost:4173/"
+    },
+    {
+      "domain": "oliveandjune.com",
+      "score": 62,
+      "grade": "C",
+      "platform": "Shopify",
+      "topGap": "Product markup",
+      "topGapDelta": 20,
+      "contactUrl": "https://oliveandjune.com/pages/customer-service?hcUrl=%2Fen-US%2Fcontact",
+      "publicPage": "http://localhost:4173/sites/oliveandjune-com.html",
+      "subject": "oliveandjune.com scored 62/100 for AI shopping agents",
+      "body": "Hi — quick note about oliveandjune.com.\n\nI run CartSignal, a public index that scores storefronts on how well autonomous shopping agents can read and buy from them. The agents in ChatGPT, Perplexity, and Gemini increasingly fetch a store on a customer's behalf before a human ever opens the page.\n\noliveandjune.com scored 62/100. The largest gap: product markup — no product json-ld on the product page.\n\nConcretely, that shows up as incomplete Product JSON-LD, so price and availability are unreadable.\n\nThe public breakdown is here: http://localhost:4173/sites/oliveandjune-com.html\n\nI built a specific fix pack for oliveandjune.com: the exact llms.txt, the robots.txt lines, the JSON-LD block, and the order to apply them. It takes a template change, not a rebuild.\n\nWant me to send it over?\n\n— CartSignal\nhttp://localhost:4173/"
+    },
+    {
+      "domain": "starface.world",
+      "score": 62,
+      "grade": "C",
+      "platform": "Shopify",
+      "topGap": "Product markup",
+      "topGapDelta": 20,
+      "contactUrl": "https://starface.world/pages/contact-us",
+      "publicPage": "http://localhost:4173/sites/starface-world.html",
+      "subject": "starface.world scored 62/100 for AI shopping agents",
+      "body": "Hi — quick note about starface.world.\n\nI run CartSignal, a public index that scores storefronts on how well autonomous shopping agents can read and buy from them. The agents in ChatGPT, Perplexity, and Gemini increasingly fetch a store on a customer's behalf before a human ever opens the page.\n\nstarface.world scored 62/100. The largest gap: product markup — no product json-ld on the product page.\n\nConcretely, that shows up as incomplete Product JSON-LD, so price and availability are unreadable.\n\nThe public breakdown is here: http://localhost:4173/sites/starface-world.html\n\nI built a specific fix pack for starface.world: the exact llms.txt, the robots.txt lines, the JSON-LD block, and the order to apply them. It takes a template change, not a rebuild.\n\nWant me to send it over?\n\n— CartSignal\nhttp://localhost:4173/"
+    },
+    {
+      "domain": "chubbiesshorts.com",
+      "score": 63,
+      "grade": "C",
+      "platform": "Shopify",
+      "topGap": "Product markup",
+      "topGapDelta": 20,
+      "contactUrl": "https://www.chubbiesshorts.com/pages/help",
+      "publicPage": "http://localhost:4173/sites/chubbiesshorts-com.html",
+      "subject": "chubbiesshorts.com scored 63/100 for AI shopping agents",
+      "body": "Hi — quick note about chubbiesshorts.com.\n\nI run CartSignal, a public index that scores storefronts on how well autonomous shopping agents can read and buy from them. The agents in ChatGPT, Perplexity, and Gemini increasingly fetch a store on a customer's behalf before a human ever opens the page.\n\nchubbiesshorts.com scored 63/100. The largest gap: product markup — product page returned 404.\n\nConcretely, that shows up as incomplete Product JSON-LD, so price and availability are unreadable.\n\nThe public breakdown is here: http://localhost:4173/sites/chubbiesshorts-com.html\n\nI built a specific fix pack for chubbiesshorts.com: the exact llms.txt, the robots.txt lines, the JSON-LD block, and the order to apply them. It takes a template change, not a rebuild.\n\nWant me to send it over?\n\n— CartSignal\nhttp://localhost:4173/"
+    },
+    {
+      "domain": "purple.com",
+      "score": 63,
+      "grade": "C",
+      "platform": "Custom/Unknown",
+      "topGap": "Product markup",
+      "topGapDelta": 20,
+      "contactUrl": "https://purple.com/contact",
+      "publicPage": "http://localhost:4173/sites/purple-com.html",
+      "subject": "purple.com scored 63/100 for AI shopping agents",
+      "body": "Hi — quick note about purple.com.\n\nI run CartSignal, a public index that scores storefronts on how well autonomous shopping agents can read and buy from them. The agents in ChatGPT, Perplexity, and Gemini increasingly fetch a store on a customer's behalf before a human ever opens the page.\n\npurple.com scored 63/100. The largest gap: product markup — no product url discovered.\n\nConcretely, that shows up as incomplete Product JSON-LD, so price and availability are unreadable.\n\nThe public breakdown is here: http://localhost:4173/sites/purple-com.html\n\nI built a specific fix pack for purple.com: the exact llms.txt, the robots.txt lines, the JSON-LD block, and the order to apply them. It takes a template change, not a rebuild.\n\nWant me to send it over?\n\n— CartSignal\nhttp://localhost:4173/"
+    },
+    {
+      "domain": "merit.com",
+      "score": 64,
+      "grade": "C",
+      "platform": "WooCommerce",
+      "topGap": "Product markup",
+      "topGapDelta": 20,
+      "contactUrl": "https://www.merit.com/contact/",
+      "publicPage": "http://localhost:4173/sites/merit-com.html",
+      "subject": "merit.com scored 64/100 for AI shopping agents",
+      "body": "Hi — quick note about merit.com.\n\nI run CartSignal, a public index that scores storefronts on how well autonomous shopping agents can read and buy from them. The agents in ChatGPT, Perplexity, and Gemini increasingly fetch a store on a customer's behalf before a human ever opens the page.\n\nmerit.com scored 64/100. The largest gap: product markup — no product json-ld on the product page.\n\nConcretely, that shows up as incomplete Product JSON-LD, so price and availability are unreadable.\n\nThe public breakdown is here: http://localhost:4173/sites/merit-com.html\n\nI built a specific fix pack for merit.com: the exact llms.txt, the robots.txt lines, the JSON-LD block, and the order to apply them. It takes a template change, not a rebuild.\n\nWant me to send it over?\n\n— CartSignal\nhttp://localhost:4173/"
+    }
+  ]
+}

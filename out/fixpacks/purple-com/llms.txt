@@ -1,0 +1,29 @@
+# Purple Innovation, LLC.
+
+> Experience less pain, better sleep with Purple. Our GelFlex Grid mattresses, pillows, and seat cushions offer cooling comfort and support. Free shipping.
+
+Canonical storefront: https://purple.com
+
+## Catalog
+- [All products](https://purple.com/products.json): public JSON catalog with price, availability, variants, and images.
+- [Sitemap](https://purple.com/sitemap.xml): every indexable URL, including product pages.
+
+## Policies
+- [Shipping](https://purple.com/policies/shipping-policy): dispatch windows, regions, and rates.
+- [Returns](https://purple.com/policies/refund-policy): return window, condition, and refund timing.
+- [Privacy](https://purple.com/policies/privacy-policy): data collected and how it is used.
+
+## Contact
+- [Support](https://purple.com/pages/contact): human contact channel and response target.
+
+## Machine notes
+- Product pages carry schema.org Product JSON-LD with offers, price, currency, and availability.
+- Autonomous shopping agents may read this site's public catalog and policy pages.
+- Product identifiers include SKU so agents can match listings across merchants.
+
+## Elsewhere
+- https://www.pinterest.ca/purple/_created/
+- https://www.facebook.com/LifeOnPurple/
+- https://www.pinterest.com/purple/
+- https://twitter.com/Purple
+- https://www.youtube.com/c/purple

@@ -1,0 +1,12 @@
+{
+  "domain": "ridge.com",
+  "score": null,
+  "grade": "N/A",
+  "steps": [
+    {
+      "check": "Automated access blocked",
+      "delta": 100,
+      "action": "Review manually."
+    }
+  ]
+}

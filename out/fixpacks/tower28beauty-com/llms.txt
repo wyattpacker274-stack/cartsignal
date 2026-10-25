@@ -1,0 +1,33 @@
+# Tower 28 Beauty
+
+> Clean, vegan makeup & skincare made with non-irritating ingredients for sensitive skin. Shop derm-tested staples that won't sting with Tower 28.
+
+Canonical storefront: https://www.tower28beauty.com
+
+## Catalog
+- [All products](https://www.tower28beauty.com/products.json): public JSON catalog with price, availability, variants, and images.
+- [Sitemap](https://www.tower28beauty.com/sitemap.xml): every indexable URL, including product pages.
+
+## Policies
+- [Shipping](https://www.tower28beauty.com/policies/shipping-policy): dispatch windows, regions, and rates.
+- [Returns](https://www.tower28beauty.com/policies/refund-policy): return window, condition, and refund timing.
+- [Privacy](https://www.tower28beauty.com/policies/privacy-policy): data collected and how it is used.
+
+## Contact
+- [Support](https://www.tower28beauty.com/pages/contact): human contact channel and response target.
+
+## Machine notes
+- Product pages carry schema.org Product JSON-LD with offers, price, currency, and availability.
+- Autonomous shopping agents may read this site's public catalog and policy pages.
+- Product identifiers include SKU so agents can match listings across merchants.
+
+## Elsewhere
+- 
+- 
+- 
+- https://www.instagram.com/tower28beauty/
+- https://www.tiktok.com/@tower28beauty?lang=en
+- 
+- 
+- https://www.youtube.com/hashtag/tower28
+- 

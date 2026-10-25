@@ -1,0 +1,12 @@
+{
+  "domain": "rothys.com",
+  "score": 97,
+  "grade": "A",
+  "steps": [
+    {
+      "check": "Machine-readable catalog",
+      "delta": 3,
+      "action": "Feed is live; publish a dedicated product sitemap so agents can enumerate every SKU."
+    }
+  ]
+}
