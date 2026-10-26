@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>oliveandjune.com — agent readiness 62/100</title>
+<title>oliveandjune.com — agent readiness 82/100</title>
 <style>
 :root{--bg:#0a0c0f;--panel:#111519;--panel2:#151a20;--line:#222a33;--ink:#e7eaef;--muted:#8a96a6;--dim:#5d6875;--accent:#6ee7a8;--warn:#f2b544;--bad:#ff7b72;--mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace}
 *{box-sizing:border-box}
@@ -159,11 +159,20 @@ table.grid{width:100%;border-collapse:collapse;font-size:14px}
 }</div>
 </div>
 <div class="check">
-<div class="row"><h3>Product markup</h3><div class="pts"><b>0</b> / 20</div></div>
-<div class="bar"><i style="width:0%;background:var(--bad)"></i></div>
-<p>No Product JSON-LD on the product page.</p>
+<div class="row"><h3>Product markup</h3><div class="pts"><b>20</b> / 20</div></div>
+<div class="bar"><i style="width:100%;background:var(--accent)"></i></div>
+<p>Complete core product fields.</p>
 <div class="mono">{
-  &quot;productUrl&quot;: &quot;https://oliveandjune.com/products/dip-powder-system&quot;
+  &quot;productUrl&quot;: &quot;https://oliveandjune.com/products/the-complete-system-6-polishes&quot;,
+  &quot;present&quot;: [
+    &quot;name&quot;,
+    &quot;price&quot;,
+    &quot;currency&quot;,
+    &quot;availability&quot;,
+    &quot;image&quot;,
+    &quot;sku/gtin&quot;
+  ],
+  &quot;missing&quot;: []
 }</div>
 </div>
 <div class="check">
@@ -180,7 +189,7 @@ table.grid{width:100%;border-collapse:collapse;font-size:14px}
 <p>Feeds: productsJson, sitemap</p>
 <div class="mono">{
   &quot;productsJson&quot;: &quot;ok&quot;,
-  &quot;firstProductHandle&quot;: &quot;dip-powder-system&quot;,
+  &quot;firstProductHandle&quot;: &quot;the-complete-system-6-polishes&quot;,
   &quot;sitemap&quot;: &quot;ok&quot;
 }</div>
 </div>
@@ -216,9 +225,9 @@ table.grid{width:100%;border-collapse:collapse;font-size:14px}
 <div class="check">
 <div class="row"><h3>Server-rendered content</h3><div class="pts"><b>10</b> / 10</div></div>
 <div class="bar"><i style="width:100%;background:var(--accent)"></i></div>
-<p>8784 visible characters in raw HTML.</p>
+<p>8787 visible characters in raw HTML.</p>
 <div class="mono">{
-  &quot;chars&quot;: 8784
+  &quot;chars&quot;: 8787
 }</div>
 </div>
 </div>
@@ -227,16 +236,16 @@ table.grid{width:100%;border-collapse:collapse;font-size:14px}
 <div class="ring">
 <svg width="190" height="190" viewBox="0 0 84 84">
 <circle cx="42" cy="42" r="34" fill="none" stroke="#1b222a" stroke-width="6"/>
-<circle cx="42" cy="42" r="34" fill="none" stroke="var(--warn)" stroke-width="6" stroke-linecap="round" stroke-dasharray="132.4 213.6"/>
+<circle cx="42" cy="42" r="34" fill="none" stroke="var(--accent)" stroke-width="6" stroke-linecap="round" stroke-dasharray="175.2 213.6"/>
 </svg>
-<div class="num"><b>62</b><span>of 100</span></div>
+<div class="num"><b>82</b><span>of 100</span></div>
 </div>
 <dl>
-<dt>Grade</dt><dd><span class="grade gC">C</span></dd>
+<dt>Grade</dt><dd><span class="grade gB">B</span></dd>
 <dt>Platform</dt><dd>Shopify</dd>
 <dt>Status</dt><dd>200</dd>
-<dt>Scanned</dt><dd>2026-10-25</dd>
-<dt>Available</dt><dd style="color:var(--accent)">+38</dd>
+<dt>Scanned</dt><dd>2026-10-26</dd>
+<dt>Available</dt><dd style="color:var(--accent)">+18</dd>
 </dl>
 <hr>
 <a class="cta" href="fixpack/oliveandjune-com.html">Open fix pack &rarr;</a>
@@ -244,12 +253,11 @@ table.grid{width:100%;border-collapse:collapse;font-size:14px}
 </div>
 
 <section>
-<h2>Fix plan &middot; +38 points</h2>
+<h2>Fix plan &middot; +18 points</h2>
 <div style="overflow-x:auto"><table class="grid">
 <thead><tr><th>#</th><th>Check</th><th>Gain</th><th>Action</th></tr></thead>
-<tbody><tr><td class="rank">01</td><td>Product markup</td><td class="num" style="color:var(--accent);font-family:var(--mono)">+20</td><td>Emit complete Product JSON-LD from the product template.</td></tr>
-<tr><td class="rank">02</td><td>Entity markup (home)</td><td class="num" style="color:var(--accent);font-family:var(--mono)">+15</td><td>Add Organization and WebSite JSON-LD to the home template. schema-block.html is the base.</td></tr>
-<tr><td class="rank">03</td><td>Machine-readable catalog</td><td class="num" style="color:var(--accent);font-family:var(--mono)">+3</td><td>Feed is live; publish a dedicated product sitemap so agents can enumerate every SKU.</td></tr></tbody>
+<tbody><tr><td class="rank">01</td><td>Entity markup (home)</td><td class="num" style="color:var(--accent);font-family:var(--mono)">+15</td><td>Add Organization and WebSite JSON-LD to the home template. schema-block.html is the base.</td></tr>
+<tr><td class="rank">02</td><td>Machine-readable catalog</td><td class="num" style="color:var(--accent);font-family:var(--mono)">+3</td><td>Feed is live; publish a dedicated product sitemap so agents can enumerate every SKU.</td></tr></tbody>
 </table></div>
 </section>
 

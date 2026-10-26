@@ -1,34 +1,29 @@
 {
-  "previousStamp": null,
-  "added": [
-    "glossier.com",
-    "allbirds.com",
-    "bombas.com",
-    "chubbiesshorts.com",
-    "drinkag1.com",
-    "huel.com",
-    "brooklinen.com",
-    "purple.com",
-    "rothys.com",
-    "awaytravel.com",
-    "casper.com",
-    "untuckit.com",
-    "warbyparker.com",
-    "meundies.com",
-    "ridge.com",
-    "onsen.com",
-    "quip.com",
-    "hims.com",
-    "curology.com",
-    "oliveandjune.com",
-    "starface.world",
-    "topicals.com",
-    "tower28beauty.com",
-    "merit.com"
-  ],
+  "previousStamp": "2026-10-25",
+  "added": [],
   "dropped": [],
-  "improved": [],
+  "improved": [
+    {
+      "domain": "oliveandjune.com",
+      "platform": "Shopify",
+      "from": 62,
+      "to": 82,
+      "delta": 20,
+      "blocked": false,
+      "unblocked": false
+    }
+  ],
   "regressed": [],
   "newlyBlocked": [],
-  "changes": []
+  "changes": [
+    {
+      "domain": "oliveandjune.com",
+      "platform": "Shopify",
+      "from": 62,
+      "to": 82,
+      "delta": 20,
+      "blocked": false,
+      "unblocked": false
+    }
+  ]
 }

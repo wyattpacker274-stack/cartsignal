@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-25T06:33:10.687Z",
-  "count": 9,
+  "generatedAt": "2026-10-26T19:48:17.043Z",
+  "count": 8,
   "queue": [
     {
       "domain": "onsen.com",
@@ -37,18 +37,6 @@
       "publicPage": "https://wyattpacker274-stack.github.io/cartsignal/sites/quip-com.html",
       "subject": "quip.com scored 45/100 for AI shopping agents",
       "body": "Hi — quick note about quip.com.\n\nI run CartSignal, a public index that scores storefronts on how well autonomous shopping agents can read and buy from them. The agents in ChatGPT, Perplexity, and Gemini increasingly fetch a store on a customer's behalf before a human ever opens the page.\n\nquip.com scored 45/100. The largest gap: product markup — no product json-ld on the product page.\n\nConcretely, that shows up as incomplete Product JSON-LD, so price and availability are unreadable.\n\nThe public breakdown is here: https://wyattpacker274-stack.github.io/cartsignal/sites/quip-com.html\n\nI built a specific fix pack for quip.com: the exact llms.txt, the robots.txt lines, the JSON-LD block, and the order to apply them. It takes a template change, not a rebuild.\n\nWant me to send it over?\n\n— CartSignal\nhttps://wyattpacker274-stack.github.io/cartsignal/"
-    },
-    {
-      "domain": "oliveandjune.com",
-      "score": 62,
-      "grade": "C",
-      "platform": "Shopify",
-      "topGap": "Product markup",
-      "topGapDelta": 20,
-      "contactUrl": "https://oliveandjune.com/pages/customer-service?hcUrl=%2Fen-US%2Fcontact",
-      "publicPage": "https://wyattpacker274-stack.github.io/cartsignal/sites/oliveandjune-com.html",
-      "subject": "oliveandjune.com scored 62/100 for AI shopping agents",
-      "body": "Hi — quick note about oliveandjune.com.\n\nI run CartSignal, a public index that scores storefronts on how well autonomous shopping agents can read and buy from them. The agents in ChatGPT, Perplexity, and Gemini increasingly fetch a store on a customer's behalf before a human ever opens the page.\n\noliveandjune.com scored 62/100. The largest gap: product markup — no product json-ld on the product page.\n\nConcretely, that shows up as incomplete Product JSON-LD, so price and availability are unreadable.\n\nThe public breakdown is here: https://wyattpacker274-stack.github.io/cartsignal/sites/oliveandjune-com.html\n\nI built a specific fix pack for oliveandjune.com: the exact llms.txt, the robots.txt lines, the JSON-LD block, and the order to apply them. It takes a template change, not a rebuild.\n\nWant me to send it over?\n\n— CartSignal\nhttps://wyattpacker274-stack.github.io/cartsignal/"
     },
     {
       "domain": "starface.world",

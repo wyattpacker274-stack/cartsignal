@@ -1,7 +1,8 @@
-CartSignal scan — 2026-10-25
-19/24 reachable · mean 72 · 4 blocked
+CartSignal scan — 2026-10-26
+19/24 reachable · mean 73 · 4 blocked
 
-First snapshot — no comparison yet.
+Compared with 2026-10-25
+Gains: oliveandjune.com: 62 -> 82 (+20)
 
 Top: rothys.com 97, untuckit.com 97, awaytravel.com 95
 Bottom: onsen.com 22, curology.com 43, quip.com 45

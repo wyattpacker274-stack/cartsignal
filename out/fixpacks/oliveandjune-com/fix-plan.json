@@ -1,13 +1,8 @@
 {
   "domain": "oliveandjune.com",
-  "score": 62,
-  "grade": "C",
+  "score": 82,
+  "grade": "B",
   "steps": [
-    {
-      "check": "Product markup",
-      "delta": 20,
-      "action": "Emit complete Product JSON-LD from the product template."
-    },
     {
       "check": "Entity markup (home)",
       "delta": 15,
