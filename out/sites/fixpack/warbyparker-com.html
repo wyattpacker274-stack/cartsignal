@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Warby Parker — agent readiness fix pack</title>
+<title>Warbyparker — agent readiness fix pack</title>
 <meta name="description" content="A prioritized agent-commerce fix plan and implementation files for warbyparker.com.">
 <style>
 :root{--bg:#0a0c0f;--panel:#111519;--panel2:#151a20;--line:#222a33;--ink:#e7eaef;--muted:#8a96a6;--dim:#5d6875;--accent:#6ee7a8;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
@@ -58,9 +58,9 @@ pre{margin:0;border-top:1px solid var(--line);padding:20px;overflow-x:auto;font:
 <div class="hero">
 <div>
 <p class="eyebrow">Agent readiness fix pack</p>
-<h1>Warby Parker</h1>
+<h1>Warbyparker</h1>
 <p class="sub">A prioritized implementation plan for <strong>warbyparker.com</strong>, based on its latest public audit. Start with the highest-impact gap and work down.</p>
-<div class="meta"><span class="badge">Score 64/100</span><span class="badge">Grade C</span><span class="badge gain">+36 points available</span></div>
+<div class="meta"><span class="badge">Score N/A</span><span class="badge">Grade N/A</span><span class="badge gain">+100 points available</span></div>
 </div>
 <aside class="buy">
 <p class="label">Implementation-ready pack</p>
@@ -70,16 +70,14 @@ pre{margin:0;border-top:1px solid var(--line);padding:20px;overflow-x:auto;font:
 </aside>
 </div>
 <section id="plan">
-<h2>The shortest path to +36 points</h2>
-<div style="overflow-x:auto"><table><thead><tr><th>#</th><th>Check</th><th>Gain</th><th>Action</th></tr></thead><tbody><tr><td class="rank">01</td><td>Product markup</td><td class="num">+20</td><td>Emit complete Product JSON-LD from the product template.</td></tr>
-<tr><td class="rank">02</td><td>Machine-readable catalog</td><td class="num">+11</td><td>Sitemap is live; add a public JSON product feed with price, availability, and variants.</td></tr>
-<tr><td class="rank">03</td><td>Agent-legible policies</td><td class="num">+5</td><td>Link shipping, returns from server-rendered footer or nav markup.</td></tr></tbody></table></div>
+<h2>The shortest path to +100 points</h2>
+<div style="overflow-x:auto"><table><thead><tr><th>#</th><th>Check</th><th>Gain</th><th>Action</th></tr></thead><tbody><tr><td class="rank">01</td><td>Automated access blocked</td><td class="num">+100</td><td>Review manually.</td></tr></tbody></table></div>
 </section>
 <section>
 <h2>Implementation files &middot; included in the pack</h2>
-<details class="file"><summary><b>llms.txt</b><span>Publish at the site root</span></summary><pre># Warby Parker
+<details class="file"><summary><b>llms.txt</b><span>Publish at the site root</span></summary><pre># Warbyparker
 
-&gt; Shop affordable, high-quality glasses, sunglasses, and contacts at Warby Parker. Frames starting at $95, including prescription lenses.
+&gt; Warbyparker sells direct to customers online.
 
 Canonical storefront: https://www.warbyparker.com
 
@@ -99,13 +97,6 @@ Canonical storefront: https://www.warbyparker.com
 - Product pages carry schema.org Product JSON-LD with offers, price, currency, and availability.
 - Autonomous shopping agents may read this site&#39;s public catalog and policy pages.
 - Product identifiers include SKU so agents can match listings across merchants.
-
-## Elsewhere
-- https://www.youtube.com/warbyparker/
-- https://twitter.com/warbyparker
-- https://www.instagram.com/warbyparker/
-- https://www.tiktok.com/@warbyparker
-- https://www.facebook.com/warbyparker
 </pre></details>
 <details class="file"><summary><b>robots-additions.txt</b><span>Merge with the existing robots.txt</span></summary><pre># --- CartSignal: agent access ---
 # Retrieval agents must be allowed to read products and policies.
@@ -131,10 +122,9 @@ Allow: /
 {
   &quot;@context&quot;: &quot;https://schema.org&quot;,
   &quot;@type&quot;: &quot;Organization&quot;,
-  &quot;name&quot;: &quot;Warby Parker&quot;,
+  &quot;name&quot;: &quot;Warbyparker&quot;,
   &quot;url&quot;: &quot;https://www.warbyparker.com&quot;,
-  &quot;description&quot;: &quot;Shop affordable, high-quality glasses, sunglasses, and contacts at Warby Parker. Frames starting at $95, including prescription lenses.&quot;,
-  &quot;logo&quot;: &quot;https://www.warbyparker.com/favicon.ico&quot;,
+  &quot;description&quot;: &quot;Warbyparker sells direct to customers online.&quot;,
   &quot;contactPoint&quot;: [
     {
       &quot;@type&quot;: &quot;ContactPoint&quot;,
@@ -145,13 +135,7 @@ Allow: /
       ]
     }
   ],
-  &quot;sameAs&quot;: [
-    &quot;https://www.youtube.com/warbyparker/&quot;,
-    &quot;https://twitter.com/warbyparker&quot;,
-    &quot;https://www.instagram.com/warbyparker/&quot;,
-    &quot;https://www.tiktok.com/@warbyparker&quot;,
-    &quot;https://www.facebook.com/warbyparker&quot;
-  ]
+  &quot;sameAs&quot;: []
 }
 &lt;/script&gt;
 
@@ -168,7 +152,7 @@ Allow: /
   ],
   &quot;brand&quot;: {
     &quot;@type&quot;: &quot;Brand&quot;,
-    &quot;name&quot;: &quot;Warby Parker&quot;
+    &quot;name&quot;: &quot;Warbyparker&quot;
   },
   &quot;offers&quot;: {
     &quot;@type&quot;: &quot;Offer&quot;,
@@ -180,7 +164,7 @@ Allow: /
     &quot;priceValidUntil&quot;: &quot;2030-12-31&quot;,
     &quot;seller&quot;: {
       &quot;@type&quot;: &quot;Organization&quot;,
-      &quot;name&quot;: &quot;Warby Parker&quot;
+      &quot;name&quot;: &quot;Warbyparker&quot;
     }
   }
 }

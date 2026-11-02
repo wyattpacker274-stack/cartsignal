@@ -1,28 +1,111 @@
 {
-  "previousStamp": "2026-10-25",
+  "previousStamp": "2026-10-26",
   "added": [],
   "dropped": [],
   "improved": [
     {
-      "domain": "oliveandjune.com",
+      "domain": "starface.world",
       "platform": "Shopify",
       "from": 62,
       "to": 82,
       "delta": 20,
       "blocked": false,
       "unblocked": false
+    },
+    {
+      "domain": "tower28beauty.com",
+      "platform": "Shopify",
+      "from": 95,
+      "to": 97,
+      "delta": 2,
+      "blocked": false,
+      "unblocked": false
     }
   ],
-  "regressed": [],
-  "newlyBlocked": [],
-  "changes": [
+  "regressed": [
     {
       "domain": "oliveandjune.com",
+      "platform": "Shopify",
+      "from": 82,
+      "to": 78,
+      "delta": -4,
+      "blocked": false,
+      "unblocked": false
+    },
+    {
+      "domain": "allbirds.com",
+      "platform": "Shopify",
+      "from": 77,
+      "to": 57,
+      "delta": -20,
+      "blocked": false,
+      "unblocked": false
+    },
+    {
+      "domain": "warbyparker.com",
+      "platform": "Custom/Unknown",
+      "from": 64,
+      "to": null,
+      "delta": -64,
+      "blocked": true,
+      "unblocked": false
+    }
+  ],
+  "newlyBlocked": [
+    {
+      "domain": "warbyparker.com",
+      "platform": "Custom/Unknown",
+      "from": 64,
+      "to": null,
+      "delta": -64,
+      "blocked": true,
+      "unblocked": false
+    }
+  ],
+  "changes": [
+    {
+      "domain": "starface.world",
       "platform": "Shopify",
       "from": 62,
       "to": 82,
       "delta": 20,
       "blocked": false,
+      "unblocked": false
+    },
+    {
+      "domain": "tower28beauty.com",
+      "platform": "Shopify",
+      "from": 95,
+      "to": 97,
+      "delta": 2,
+      "blocked": false,
+      "unblocked": false
+    },
+    {
+      "domain": "oliveandjune.com",
+      "platform": "Shopify",
+      "from": 82,
+      "to": 78,
+      "delta": -4,
+      "blocked": false,
+      "unblocked": false
+    },
+    {
+      "domain": "allbirds.com",
+      "platform": "Shopify",
+      "from": 77,
+      "to": 57,
+      "delta": -20,
+      "blocked": false,
+      "unblocked": false
+    },
+    {
+      "domain": "warbyparker.com",
+      "platform": "Custom/Unknown",
+      "from": 64,
+      "to": null,
+      "delta": -64,
+      "blocked": true,
       "unblocked": false
     }
   ]

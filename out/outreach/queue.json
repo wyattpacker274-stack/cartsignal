@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-26T19:48:17.043Z",
-  "count": 8,
+  "generatedAt": "2026-11-02T22:39:27.506Z",
+  "count": 7,
   "queue": [
     {
       "domain": "onsen.com",
@@ -39,16 +39,16 @@
       "body": "Hi — quick note about quip.com.\n\nI run CartSignal, a public index that scores storefronts on how well autonomous shopping agents can read and buy from them. The agents in ChatGPT, Perplexity, and Gemini increasingly fetch a store on a customer's behalf before a human ever opens the page.\n\nquip.com scored 45/100. The largest gap: product markup — no product json-ld on the product page.\n\nConcretely, that shows up as incomplete Product JSON-LD, so price and availability are unreadable.\n\nThe public breakdown is here: https://wyattpacker274-stack.github.io/cartsignal/sites/quip-com.html\n\nI built a specific fix pack for quip.com: the exact llms.txt, the robots.txt lines, the JSON-LD block, and the order to apply them. It takes a template change, not a rebuild.\n\nWant me to send it over?\n\n— CartSignal\nhttps://wyattpacker274-stack.github.io/cartsignal/"
     },
     {
-      "domain": "starface.world",
-      "score": 62,
+      "domain": "allbirds.com",
+      "score": 57,
       "grade": "C",
       "platform": "Shopify",
       "topGap": "Product markup",
       "topGapDelta": 20,
-      "contactUrl": "https://starface.world/pages/contact-us",
-      "publicPage": "https://wyattpacker274-stack.github.io/cartsignal/sites/starface-world.html",
-      "subject": "starface.world scored 62/100 for AI shopping agents",
-      "body": "Hi — quick note about starface.world.\n\nI run CartSignal, a public index that scores storefronts on how well autonomous shopping agents can read and buy from them. The agents in ChatGPT, Perplexity, and Gemini increasingly fetch a store on a customer's behalf before a human ever opens the page.\n\nstarface.world scored 62/100. The largest gap: product markup — no product json-ld on the product page.\n\nConcretely, that shows up as incomplete Product JSON-LD, so price and availability are unreadable.\n\nThe public breakdown is here: https://wyattpacker274-stack.github.io/cartsignal/sites/starface-world.html\n\nI built a specific fix pack for starface.world: the exact llms.txt, the robots.txt lines, the JSON-LD block, and the order to apply them. It takes a template change, not a rebuild.\n\nWant me to send it over?\n\n— CartSignal\nhttps://wyattpacker274-stack.github.io/cartsignal/"
+      "contactUrl": "https://www.allbirds.com/cdn/shop/t/4159/assets/_commonjsHelpers.js",
+      "publicPage": "https://wyattpacker274-stack.github.io/cartsignal/sites/allbirds-com.html",
+      "subject": "allbirds.com scored 57/100 for AI shopping agents",
+      "body": "Hi — quick note about allbirds.com.\n\nI run CartSignal, a public index that scores storefronts on how well autonomous shopping agents can read and buy from them. The agents in ChatGPT, Perplexity, and Gemini increasingly fetch a store on a customer's behalf before a human ever opens the page.\n\nallbirds.com scored 57/100. The largest gap: product markup — missing: name, price, currency, availability, image, sku/gtin.\n\nConcretely, that shows up as incomplete Product JSON-LD, so price and availability are unreadable.\n\nThe public breakdown is here: https://wyattpacker274-stack.github.io/cartsignal/sites/allbirds-com.html\n\nI built a specific fix pack for allbirds.com: the exact llms.txt, the robots.txt lines, the JSON-LD block, and the order to apply them. It takes a template change, not a rebuild.\n\nWant me to send it over?\n\n— CartSignal\nhttps://wyattpacker274-stack.github.io/cartsignal/"
     },
     {
       "domain": "chubbiesshorts.com",
@@ -73,18 +73,6 @@
       "publicPage": "https://wyattpacker274-stack.github.io/cartsignal/sites/purple-com.html",
       "subject": "purple.com scored 63/100 for AI shopping agents",
       "body": "Hi — quick note about purple.com.\n\nI run CartSignal, a public index that scores storefronts on how well autonomous shopping agents can read and buy from them. The agents in ChatGPT, Perplexity, and Gemini increasingly fetch a store on a customer's behalf before a human ever opens the page.\n\npurple.com scored 63/100. The largest gap: product markup — no crawlable product page found.\n\nConcretely, that shows up as incomplete Product JSON-LD, so price and availability are unreadable.\n\nThe public breakdown is here: https://wyattpacker274-stack.github.io/cartsignal/sites/purple-com.html\n\nI built a specific fix pack for purple.com: the exact llms.txt, the robots.txt lines, the JSON-LD block, and the order to apply them. It takes a template change, not a rebuild.\n\nWant me to send it over?\n\n— CartSignal\nhttps://wyattpacker274-stack.github.io/cartsignal/"
-    },
-    {
-      "domain": "warbyparker.com",
-      "score": 64,
-      "grade": "C",
-      "platform": "Custom/Unknown",
-      "topGap": "Product markup",
-      "topGapDelta": 20,
-      "contactUrl": "https://www.warbyparker.com/contacts",
-      "publicPage": "https://wyattpacker274-stack.github.io/cartsignal/sites/warbyparker-com.html",
-      "subject": "warbyparker.com scored 64/100 for AI shopping agents",
-      "body": "Hi — quick note about warbyparker.com.\n\nI run CartSignal, a public index that scores storefronts on how well autonomous shopping agents can read and buy from them. The agents in ChatGPT, Perplexity, and Gemini increasingly fetch a store on a customer's behalf before a human ever opens the page.\n\nwarbyparker.com scored 64/100. The largest gap: product markup — no crawlable product page found.\n\nConcretely, that shows up as incomplete Product JSON-LD, so price and availability are unreadable.\n\nThe public breakdown is here: https://wyattpacker274-stack.github.io/cartsignal/sites/warbyparker-com.html\n\nI built a specific fix pack for warbyparker.com: the exact llms.txt, the robots.txt lines, the JSON-LD block, and the order to apply them. It takes a template change, not a rebuild.\n\nWant me to send it over?\n\n— CartSignal\nhttps://wyattpacker274-stack.github.io/cartsignal/"
     },
     {
       "domain": "merit.com",

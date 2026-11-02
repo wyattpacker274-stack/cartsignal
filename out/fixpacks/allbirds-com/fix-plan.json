@@ -1,8 +1,13 @@
 {
   "domain": "allbirds.com",
-  "score": 77,
-  "grade": "B",
+  "score": 57,
+  "grade": "C",
   "steps": [
+    {
+      "check": "Product markup",
+      "delta": 20,
+      "action": "Add name, price, currency, availability, image, sku/gtin to the Product JSON-LD emitted by the product template."
+    },
     {
       "check": "Entity markup (home)",
       "delta": 15,
