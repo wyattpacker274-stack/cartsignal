@@ -1,10 +1,8 @@
-CartSignal scan — 2026-11-02
+CartSignal scan — 2026-11-09
 18/24 reachable · mean 73 · 5 blocked
 
-Compared with 2026-10-26
-Gains: starface.world: 62 -> 82 (+20) | tower28beauty.com: 95 -> 97 (+2)
-Drops: oliveandjune.com: 82 -> 78 (-4) | allbirds.com: 77 -> 57 (-20) | warbyparker.com: 64 -> blocked
-Newly blocked: warbyparker.com
+Compared with 2026-11-02
+Drops: casper.com: 93 -> 91 (-2)
 
 Top: rothys.com 97, untuckit.com 97, tower28beauty.com 97
 Bottom: onsen.com 22, curology.com 43, quip.com 45
