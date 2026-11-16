@@ -1,13 +1,8 @@
 {
   "domain": "oliveandjune.com",
-  "score": 78,
-  "grade": "B",
+  "score": 90,
+  "grade": "A",
   "steps": [
-    {
-      "check": "Agent-legible policies",
-      "delta": 10,
-      "action": "Link shipping, returns, contact, privacy from server-rendered footer or nav markup."
-    },
     {
       "check": "Entity markup (home)",
       "delta": 7,
@@ -17,11 +12,6 @@
       "check": "Machine-readable catalog",
       "delta": 3,
       "action": "Feed is live; publish a dedicated product sitemap so agents can enumerate every SKU."
-    },
-    {
-      "check": "Product markup",
-      "delta": 2,
-      "action": "Add sku/gtin to the Product JSON-LD emitted by the product template."
     }
   ]
 }

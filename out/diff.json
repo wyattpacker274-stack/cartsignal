@@ -1,27 +1,45 @@
 {
-  "previousStamp": "2026-11-02",
+  "previousStamp": "2026-11-09",
   "added": [],
   "dropped": [],
-  "improved": [],
-  "regressed": [
+  "improved": [
+    {
+      "domain": "oliveandjune.com",
+      "platform": "Shopify",
+      "from": 78,
+      "to": 90,
+      "delta": 12,
+      "blocked": false,
+      "unblocked": false
+    },
     {
       "domain": "casper.com",
       "platform": "Shopify",
-      "from": 93,
-      "to": 91,
-      "delta": -2,
+      "from": 91,
+      "to": 93,
+      "delta": 2,
       "blocked": false,
       "unblocked": false
     }
   ],
+  "regressed": [],
   "newlyBlocked": [],
   "changes": [
     {
+      "domain": "oliveandjune.com",
+      "platform": "Shopify",
+      "from": 78,
+      "to": 90,
+      "delta": 12,
+      "blocked": false,
+      "unblocked": false
+    },
+    {
       "domain": "casper.com",
       "platform": "Shopify",
-      "from": 93,
-      "to": 91,
-      "delta": -2,
+      "from": 91,
+      "to": 93,
+      "delta": 2,
       "blocked": false,
       "unblocked": false
     }
