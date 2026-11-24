@@ -1,45 +1,64 @@
 {
-  "previousStamp": "2026-11-09",
+  "previousStamp": "2026-11-16",
   "added": [],
   "dropped": [],
   "improved": [
     {
-      "domain": "oliveandjune.com",
+      "domain": "allbirds.com",
       "platform": "Shopify",
-      "from": 78,
-      "to": 90,
-      "delta": 12,
-      "blocked": false,
-      "unblocked": false
-    },
-    {
-      "domain": "casper.com",
-      "platform": "Shopify",
-      "from": 91,
-      "to": 93,
-      "delta": 2,
+      "from": 57,
+      "to": 77,
+      "delta": 20,
       "blocked": false,
       "unblocked": false
     }
   ],
-  "regressed": [],
-  "newlyBlocked": [],
-  "changes": [
+  "regressed": [
     {
       "domain": "oliveandjune.com",
       "platform": "Shopify",
-      "from": 78,
-      "to": 90,
-      "delta": 12,
+      "from": 90,
+      "to": 88,
+      "delta": -2,
       "blocked": false,
       "unblocked": false
     },
     {
-      "domain": "casper.com",
+      "domain": "tower28beauty.com",
       "platform": "Shopify",
-      "from": 91,
-      "to": 93,
-      "delta": 2,
+      "from": 97,
+      "to": 95,
+      "delta": -2,
+      "blocked": false,
+      "unblocked": false
+    }
+  ],
+  "newlyBlocked": [],
+  "changes": [
+    {
+      "domain": "allbirds.com",
+      "platform": "Shopify",
+      "from": 57,
+      "to": 77,
+      "delta": 20,
+      "blocked": false,
+      "unblocked": false
+    },
+    {
+      "domain": "oliveandjune.com",
+      "platform": "Shopify",
+      "from": 90,
+      "to": 88,
+      "delta": -2,
+      "blocked": false,
+      "unblocked": false
+    },
+    {
+      "domain": "tower28beauty.com",
+      "platform": "Shopify",
+      "from": 97,
+      "to": 95,
+      "delta": -2,
       "blocked": false,
       "unblocked": false
     }

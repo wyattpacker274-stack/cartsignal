@@ -1,10 +1,11 @@
-CartSignal scan — 2026-11-16
-18/24 reachable · mean 74 · 5 blocked
+CartSignal scan — 2026-11-24
+18/24 reachable · mean 75 · 5 blocked
 
-Compared with 2026-11-09
-Gains: oliveandjune.com: 78 -> 90 (+12) | casper.com: 91 -> 93 (+2)
+Compared with 2026-11-16
+Gains: allbirds.com: 57 -> 77 (+20)
+Drops: oliveandjune.com: 90 -> 88 (-2) | tower28beauty.com: 97 -> 95 (-2)
 
-Top: rothys.com 97, untuckit.com 97, tower28beauty.com 97
+Top: rothys.com 97, untuckit.com 97, awaytravel.com 95
 Bottom: onsen.com 22, curology.com 43, quip.com 45
 
 https://wyattpacker274-stack.github.io/cartsignal/
